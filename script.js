@@ -614,6 +614,7 @@ const portfolioCategorySelect = document.querySelector(
 const mobileMenuToggle = document.querySelector("#mobile-menu-toggle");
 const mobileMenuPanel = document.querySelector("#mobile-menu-panel");
 const trustCounters = [...document.querySelectorAll(".trust-counter")];
+const trustLogos = document.querySelector(".trust-logos");
 
 function resetScrollToTopOnRefresh() {
   if ("scrollRestoration" in window.history) {
@@ -1007,4 +1008,34 @@ function initScrollReveal(scope = document) {
   targets.forEach((element) => observer.observe(element));
 }
 
+function initTrustMarquee() {
+  if (!trustLogos) {
+    return;
+  }
+
+  if (
+    !("IntersectionObserver" in window) ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    trustLogos.classList.add("is-animating");
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        trustLogos.classList.toggle("is-animating", entry.isIntersecting);
+      });
+    },
+    {
+      root: null,
+      rootMargin: "20% 0px 20% 0px",
+      threshold: 0.05,
+    }
+  );
+
+  observer.observe(trustLogos);
+}
+
+initTrustMarquee();
 initScrollReveal();

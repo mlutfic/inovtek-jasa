@@ -708,13 +708,20 @@ img {
   gap: 1rem;
   width: max-content;
   animation: trust-marquee 24s linear infinite;
+  animation-play-state: paused;
+  will-change: transform;
+}
+
+.trust-logos.is-animating .trust-track {
+  animation-play-state: running;
 }
 
 .trust-logo {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  min-width: 172px;
+  width: 232px;
+  min-width: 232px;
   height: 74px;
   padding: 0.85rem 1.1rem;
   border-radius: 20px;
@@ -732,7 +739,8 @@ img {
 }
 
 .trust-logo.is-lkppk {
-  min-width: 312px;
+  width: 232px;
+  min-width: 232px;
   padding: 0;
   background: transparent;
   border: 0;
@@ -741,46 +749,24 @@ img {
 
 .trust-logo.is-lkppk img {
   width: 100%;
-  max-width: 312px;
+  max-width: 232px;
   max-height: none;
 }
 
-.trust-logo.is-endurance {
-  min-width: 232px;
-}
-
 .trust-logo.is-endurance img {
-  max-height: 44px;
-}
-
-.trust-logo.is-ultimate {
-  min-width: 170px;
+  max-height: 40px;
 }
 
 .trust-logo.is-ultimate img {
-  max-height: 58px;
-}
-
-.trust-logo.is-saka {
-  min-width: 208px;
+  max-height: 50px;
 }
 
 .trust-logo.is-saka img {
   max-height: 34px;
 }
 
-.trust-logo.is-kerjanusa {
-  min-width: 228px;
-  background: #ffffff;
-  border-color: rgba(17, 17, 17, 0.08);
-}
-
 .trust-logo.is-kerjanusa img {
   max-height: 36px;
-}
-
-.trust-logo.is-shu {
-  min-width: 228px;
 }
 
 .trust-logo.is-shu img {
@@ -823,6 +809,27 @@ img {
   margin-top: 0.25rem;
   color: #9197a6;
   font-size: 0.72rem;
+}
+
+@supports (content-visibility: auto) {
+  .services,
+  .pricing,
+  .portfolio,
+  .benefits,
+  .testimonials,
+  .cta,
+  .site-footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 760px;
+  }
+
+  .pricing {
+    contain-intrinsic-size: 1320px;
+  }
+
+  .site-footer {
+    contain-intrinsic-size: 420px;
+  }
 }
 
 .services-grid {
@@ -2586,11 +2593,12 @@ img {
 
   .trust-track {
     gap: 0.75rem;
-    animation-duration: 20s;
+    animation-duration: 28s;
   }
 
   .trust-logo {
-    min-width: 124px;
+    width: 158px;
+    min-width: 158px;
     height: auto;
     padding: 0.3rem 0.2rem;
     border-radius: 0;
@@ -2604,7 +2612,8 @@ img {
   }
 
   .trust-logo.is-lkppk {
-    min-width: 228px;
+    width: 158px;
+    min-width: 158px;
     padding: 0;
     background: transparent;
     border: 0;
@@ -2612,45 +2621,23 @@ img {
   }
 
   .trust-logo.is-lkppk img {
-    max-width: 228px;
-  }
-
-  .trust-logo.is-endurance {
-    min-width: 176px;
+    max-width: 158px;
   }
 
   .trust-logo.is-endurance img {
     max-height: 34px;
   }
 
-  .trust-logo.is-ultimate {
-    min-width: 120px;
-  }
-
   .trust-logo.is-ultimate img {
     max-height: 42px;
-  }
-
-  .trust-logo.is-saka {
-    min-width: 158px;
   }
 
   .trust-logo.is-saka img {
     max-height: 26px;
   }
 
-  .trust-logo.is-kerjanusa {
-    min-width: 168px;
-    background: transparent;
-    border-color: transparent;
-  }
-
   .trust-logo.is-kerjanusa img {
     max-height: 28px;
-  }
-
-  .trust-logo.is-shu {
-    min-width: 170px;
   }
 
   .trust-logo.is-shu img {
@@ -2854,6 +2841,7 @@ img {
 
   .trust-track {
     animation: none;
+    will-change: auto;
   }
 
   .reveal-ready {

@@ -694,40 +694,6 @@ img {
   text-transform: uppercase;
 }
 
-.trust-support-label {
-  margin-top: 1rem;
-}
-
-.trust-support-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  max-width: 560px;
-  margin: 0.85rem auto 0;
-}
-
-.trust-support-card {
-  display: grid;
-  place-items: center;
-  flex: 0 1 260px;
-  min-width: 240px;
-  min-height: 112px;
-  padding: 1rem 1.15rem;
-  border-radius: 22px;
-  background: #ffffff;
-  border: 1px solid rgba(17, 17, 17, 0.06);
-  box-shadow: var(--shadow-soft);
-}
-
-.trust-support-card img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  max-height: 88px;
-  object-fit: contain;
-}
-
 .trust-logos {
   position: relative;
   overflow: hidden;
@@ -878,10 +844,6 @@ img {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 2.1rem;
-}
-
-.trust-support-grid + .trust-stats {
-  margin-top: 1.35rem;
 }
 
 .trust-stat {
@@ -2665,28 +2627,6 @@ img {
   .trust-track {
     gap: 0.75rem;
     animation-duration: 20s;
-  }
-
-  .trust-support-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.6rem;
-    max-width: 340px;
-    margin-top: 0.7rem;
-  }
-
-  .trust-support-card {
-    min-width: 0;
-    min-height: auto;
-    padding: 0.35rem 0.2rem;
-    border-radius: 0;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-  }
-
-  .trust-support-card img {
-    max-height: 54px;
   }
 
   .trust-logo {

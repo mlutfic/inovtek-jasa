@@ -2677,9 +2677,12 @@ img {
 
   .trust-support-card {
     min-width: 0;
-    min-height: 84px;
-    padding: 0.7rem;
-    border-radius: 18px;
+    min-height: auto;
+    padding: 0.35rem 0.2rem;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .trust-support-card img {
@@ -2688,9 +2691,12 @@ img {
 
   .trust-logo {
     min-width: 124px;
-    height: 60px;
-    padding: 0.65rem 0.8rem;
-    border-radius: 16px;
+    height: auto;
+    padding: 0.3rem 0.2rem;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   .trust-logo img {
@@ -2699,6 +2705,8 @@ img {
 
   .trust-logo.is-lkppk {
     min-width: 228px;
+    background: transparent;
+    border-color: transparent;
   }
 
   .lkpp-lockup {
@@ -2743,6 +2751,8 @@ img {
 
   .trust-logo.is-kerjanusa {
     min-width: 168px;
+    background: transparent;
+    border-color: transparent;
   }
 
   .trust-logo.is-kerjanusa img {

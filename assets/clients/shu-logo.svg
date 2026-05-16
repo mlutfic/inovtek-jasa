@@ -1,0 +1,27 @@
+<svg width="780" height="210" viewBox="0 0 780 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shuGradient" x1="18" y1="18" x2="260" y2="192" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A067F" />
+      <stop offset="0.58" stop-color="#7D13FF" />
+      <stop offset="1" stop-color="#A518FF" />
+    </linearGradient>
+  </defs>
+
+  <path
+    d="M75 24H277L260 64H107C86 64 70 77 70 92C70 106 83 116 102 116H181C219 116 247 139 247 171C247 193 240 206 229 210H0L17 170H167C188 170 204 158 204 143C204 129 191 120 172 120H92C54 120 26 97 26 65C26 43 33 30 44 24H75Z"
+    fill="url(#shuGradient)"
+  />
+
+  <path
+    d="M99 58H240L226 94H148L135 123H18L31 88H105L117 58H99Z"
+    fill="#FBFBFF"
+  />
+
+  <g transform="translate(272 6) skewX(-11)">
+    <path d="M12 12H52V78H148V12H188V190H148V114H52V190H12V12Z" fill="#2A067F" />
+    <path
+      d="M236 12H276V129C276 151 292 166 316 166C340 166 356 151 356 129V12H396V133C396 175 366 202 316 202C266 202 236 175 236 133V12Z"
+      fill="#2A067F"
+    />
+  </g>
+</svg>

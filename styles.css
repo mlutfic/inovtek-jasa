@@ -2070,8 +2070,24 @@ img {
   padding: 0 0 2.6rem;
 }
 
+.footer-brand {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
 .footer-brandmark {
   color: #ffffff;
+}
+
+.footer-brand p {
+  margin: 0;
 }
 
 .footer-grid h3 {

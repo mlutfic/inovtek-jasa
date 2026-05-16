@@ -149,6 +149,38 @@ img {
   letter-spacing: -0.04em;
 }
 
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.site-brand-mark {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  object-fit: contain;
+}
+
+.site-brand-copy {
+  display: grid;
+  line-height: 1;
+}
+
+.site-brand-main {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.site-brand-sub {
+  margin-top: 0.14rem;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: rgba(17, 17, 17, 0.62);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -209,13 +241,10 @@ img {
 }
 
 .mobile-brand-mark {
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background:
-    linear-gradient(135deg, #9cf13c 0%, #19b7ff 70%),
-    #ffffff;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.14);
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  object-fit: contain;
 }
 
 .mobile-brand-copy {
@@ -2210,6 +2239,15 @@ img {
     font-size: 1.12rem;
     font-weight: 800;
     letter-spacing: -0.05em;
+  }
+
+  .site-brand-main {
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  .site-brand-sub {
+    color: rgba(255, 255, 255, 0.78);
   }
 
   .nav-links {

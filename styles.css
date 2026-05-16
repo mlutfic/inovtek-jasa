@@ -733,56 +733,16 @@ img {
 
 .trust-logo.is-lkppk {
   min-width: 312px;
-  background: #ffffff;
-  border-color: rgba(17, 17, 17, 0.08);
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
-.lkpp-lockup {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
+.trust-logo.is-lkppk img {
   width: 100%;
-}
-
-.lkpp-lockup-mark {
-  flex: 0 0 auto;
-  width: 44px;
-  max-width: none;
+  max-width: 312px;
   max-height: none;
-  object-fit: contain;
-}
-
-.lkpp-lockup-copy {
-  min-width: 0;
-  text-align: left;
-}
-
-.lkpp-lockup-wordmark {
-  font-size: 2.7rem;
-  font-weight: 800;
-  letter-spacing: -0.12em;
-  line-height: 0.78;
-  white-space: nowrap;
-}
-
-.lkpp-lockup-wordmark .is-black {
-  color: #1a1a1a;
-}
-
-.lkpp-lockup-wordmark .is-red {
-  color: #ef1d24;
-}
-
-.lkpp-lockup-sub {
-  color: #4b4b4b;
-  font-size: 0.52rem;
-  font-weight: 500;
-  line-height: 1.08;
-  white-space: nowrap;
-}
-
-.lkpp-lockup-sub:first-of-type {
-  margin-top: 0.12rem;
 }
 
 .trust-logo.is-endurance {
@@ -2644,37 +2604,15 @@ img {
   }
 
   .trust-logo.is-lkppk {
-    min-width: 312px;
-    min-height: 74px;
-    padding: 0.5rem 0.8rem;
-    border-radius: 22px;
-    background: #ffffff;
-    border: 1px solid rgba(17, 17, 17, 0.06);
-    box-shadow: var(--shadow-soft);
+    min-width: 228px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
-  .lkpp-lockup {
-    gap: 0.45rem;
-  }
-
-  .lkpp-lockup-mark {
-    width: 50px;
-  }
-
-  .lkpp-lockup-copy {
-    display: block;
-    text-align: left;
-  }
-
-  .lkpp-lockup-wordmark {
-    font-size: 2.7rem;
-    line-height: 0.82;
-  }
-
-  .lkpp-lockup-sub {
-    display: block;
-    font-size: 0.36rem;
-    line-height: 1.05;
+  .trust-logo.is-lkppk img {
+    max-width: 228px;
   }
 
   .trust-logo.is-endurance {

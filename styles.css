@@ -2644,9 +2644,13 @@ img {
   }
 
   .trust-logo.is-lkppk {
-    min-width: 172px;
-    background: transparent;
-    border-color: transparent;
+    min-width: 312px;
+    min-height: 74px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 22px;
+    background: #ffffff;
+    border: 1px solid rgba(17, 17, 17, 0.06);
+    box-shadow: var(--shadow-soft);
   }
 
   .lkpp-lockup {
@@ -2654,21 +2658,23 @@ img {
   }
 
   .lkpp-lockup-mark {
-    width: 31px;
+    width: 50px;
   }
 
   .lkpp-lockup-copy {
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: left;
   }
 
   .lkpp-lockup-wordmark {
-    font-size: 2.05rem;
-    line-height: 0.9;
+    font-size: 2.7rem;
+    line-height: 0.82;
   }
 
   .lkpp-lockup-sub {
-    display: none;
+    display: block;
+    font-size: 0.36rem;
+    line-height: 1.05;
   }
 
   .trust-logo.is-endurance {

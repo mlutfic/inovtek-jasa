@@ -2752,6 +2752,535 @@ img {
   line-height: 1.4;
 }
 
+.portfolio-preview-android-slider {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-orbit {
+  position: absolute;
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(82, 53, 236, 0.22) 0%, transparent 68%);
+  filter: blur(2px);
+}
+
+.portfolio-preview-android-slider .portfolio-android-phone {
+  position: relative;
+  width: 122px;
+  height: 208px;
+  padding: 8px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, #f8fbff 0%, #dce5f2 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.94),
+    0 18px 24px rgba(14, 23, 41, 0.2);
+}
+
+.portfolio-preview-android-slider .portfolio-android-phone::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f1f4fb 100%);
+  box-shadow: inset 0 0 0 1px rgba(120, 137, 166, 0.08);
+}
+
+.portfolio-preview-android-slider .portfolio-android-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  z-index: 3;
+  width: 34px;
+  height: 6px;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: rgba(26, 34, 54, 0.78);
+}
+
+.portfolio-preview-android-slider .portfolio-android-phone-screen,
+.portfolio-preview-android-slider .portfolio-android-slider-dots {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-preview-android-slider .portfolio-android-phone-screen {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-stage {
+  height: 100%;
+  overflow: hidden;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-track {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: portfolioAndroidSliderCarousel 18s ease-in-out infinite;
+}
+
+.portfolio-preview-android-slider:hover .portfolio-android-slider-track {
+  animation-play-state: paused;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slide {
+  flex: 0 0 33.3333%;
+  min-width: 0;
+  height: 100%;
+  padding: 14px 8px 8px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(66, 74, 113, 0.22);
+  animation: portfolioAndroidSliderDot 18s infinite;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-dots span:nth-child(2) {
+  animation-delay: 6s;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slider-dots span:nth-child(3) {
+  animation-delay: 12s;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slide strong,
+.portfolio-preview-android-slider .portfolio-android-slide p,
+.portfolio-preview-android-slider .portfolio-android-slide h5 {
+  margin: 0;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slide-budget,
+.portfolio-preview-android-slider .portfolio-android-slide-health,
+.portfolio-preview-android-slider .portfolio-android-slide-home {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 8px;
+  background: linear-gradient(180deg, #f9fbff 0%, #f2f5fb 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-balance {
+  padding: 8px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #342198 0%, #4b1fc1 100%);
+  color: #ffffff;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-balance span {
+  display: block;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.16rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-balance strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-balance p {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.15rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-chart,
+.portfolio-preview-android-slider .portfolio-android-budget-transactions,
+.portfolio-preview-android-slider .portfolio-android-health-ringcard,
+.portfolio-preview-android-slider .portfolio-android-health-stats article,
+.portfolio-preview-android-slider .portfolio-android-home-card.is-light {
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: inset 0 0 0 1px rgba(125, 139, 166, 0.08);
+}
+
+.portfolio-preview-android-slider .portfolio-android-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-card-head strong {
+  color: #202b48;
+  font-size: 0.26rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-card-head span {
+  color: #5a66a6;
+  font-size: 0.16rem;
+  font-weight: 800;
+}
+
+.portfolio-preview-android-slider .portfolio-android-chart-grid {
+  margin-top: 8px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-chart-grid i {
+  display: block;
+  height: 44px;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(93, 99, 226, 0.06), rgba(93, 99, 226, 0)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 255, 0.92));
+  box-shadow: inset 0 -1px 0 rgba(94, 100, 159, 0.08);
+}
+
+.portfolio-preview-android-slider .portfolio-android-chart-labels {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-chart-labels span {
+  color: rgba(86, 95, 134, 0.62);
+  font-size: 0.12rem;
+  text-align: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 6px;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article i {
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article .is-food {
+  background: linear-gradient(180deg, #ffd8a4 0%, #ffab42 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article .is-transit {
+  background: linear-gradient(180deg, #d3ddff 0%, #7a8cff 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article .is-fashion {
+  background: linear-gradient(180deg, #f2d8ff 0%, #d26cff 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article strong,
+.portfolio-preview-android-slider .portfolio-android-home-card strong {
+  display: block;
+  color: #232d4b;
+  font-size: 0.2rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article p,
+.portfolio-preview-android-slider .portfolio-android-home-card p {
+  color: rgba(81, 89, 123, 0.66);
+  font-size: 0.14rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-budget-transactions article b {
+  color: #ff4b35;
+  font-size: 0.17rem;
+  font-weight: 900;
+}
+
+.portfolio-preview-android-slider .portfolio-android-bottomnav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  padding: 6px 4px 0;
+}
+
+.portfolio-preview-android-slider .portfolio-android-bottomnav span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 16px;
+  border-radius: 10px;
+  background: rgba(240, 244, 251, 0.96);
+  color: rgba(82, 89, 121, 0.72);
+  font-size: 0.13rem;
+  font-weight: 800;
+}
+
+.portfolio-preview-android-slider .portfolio-android-bottomnav .is-active {
+  color: #4c5de0;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-topbar,
+.portfolio-preview-android-slider .portfolio-android-home-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-topbar span,
+.portfolio-preview-android-slider .portfolio-android-home-topbar span {
+  color: #3d2c9e;
+  font-size: 0.24rem;
+  font-weight: 900;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-user i {
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #d7e4ff 0%, #7f91ff 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-user strong,
+.portfolio-preview-android-slider .portfolio-android-home-topbar strong {
+  color: #2e2484;
+  font-size: 0.3rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ringcard {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: conic-gradient(#31158f 0 82%, rgba(49, 21, 143, 0.12) 82% 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ring::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ring strong,
+.portfolio-preview-android-slider .portfolio-android-health-ring p {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ring strong {
+  color: #2f178f;
+  font-size: 0.58rem;
+  line-height: 1;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-ring p {
+  color: rgba(70, 67, 111, 0.72);
+  font-size: 0.13rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-banner {
+  width: 100%;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(235, 226, 255, 0.92);
+  color: #5b42b6;
+  font-size: 0.13rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-stats {
+  display: grid;
+  gap: 6px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-stats article span {
+  display: block;
+  color: rgba(84, 89, 121, 0.64);
+  font-size: 0.13rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-stats article strong {
+  display: block;
+  margin-top: 4px;
+  color: #222b48;
+  font-size: 0.26rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-workouts {
+  display: grid;
+  align-content: start;
+}
+
+.portfolio-preview-android-slider .portfolio-android-health-workouts .portfolio-android-card-head b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background: #331b95;
+  color: #ffffff;
+  font-size: 0.14rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-slide-home {
+  background: linear-gradient(180deg, #f9fbff 0%, #f4f6fb 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero h5 {
+  color: #31158f;
+  font-size: 0.4rem;
+  line-height: 1.02;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero p {
+  margin-top: 4px;
+  color: rgba(74, 81, 113, 0.7);
+  font-size: 0.16rem;
+  line-height: 1.4;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero article {
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: inset 0 0 0 1px rgba(125, 139, 166, 0.08);
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero article strong {
+  display: block;
+  color: #3b3f9b;
+  font-size: 0.28rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-hero article p {
+  margin-top: 2px;
+  color: rgba(90, 96, 128, 0.62);
+  font-size: 0.12rem;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card {
+  position: relative;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-light {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-light span {
+  color: #5449b7;
+  font-size: 0.13rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-light i {
+  width: 18px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2b128d 0%, #5c2cd8 100%);
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-purple {
+  display: grid;
+  gap: 6px;
+  background: linear-gradient(180deg, #4a19be 0%, #3a109c 100%);
+  color: #ffffff;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-purple span {
+  justify-self: end;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.13rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-purple strong {
+  color: #ffffff;
+  font-size: 0.82rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-purple p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.14rem;
+  text-align: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-slider em {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.13rem;
+  font-style: normal;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-slider i {
+  position: relative;
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-slider i::before {
+  content: "";
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+}
+
+.portfolio-preview-android-slider .portfolio-android-home-card.is-purple b {
+  color: #ffffff;
+  font-size: 0.26rem;
+}
+
 .portfolio-preview-jobs-slider > .portfolio-browser-shell {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -7855,6 +8384,44 @@ img {
   background: rgba(15, 30, 12, 0.86);
   color: #e0ffd0;
   font-size: 0.23rem;
+}
+
+@keyframes portfolioAndroidSliderCarousel {
+  0%,
+  27% {
+    transform: translateX(0);
+  }
+  33%,
+  60% {
+    transform: translateX(-33.3333%);
+  }
+  66%,
+  93% {
+    transform: translateX(-66.6667%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes portfolioAndroidSliderDot {
+  0%,
+  15% {
+    transform: scale(1.08);
+    background: rgba(66, 74, 113, 0.78);
+  }
+  24%,
+  100% {
+    transform: scale(0.84);
+    background: rgba(66, 74, 113, 0.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-preview-android-slider .portfolio-android-slider-track,
+  .portfolio-preview-android-slider .portfolio-android-slider-dots span {
+    animation: none;
+  }
 }
 
 @keyframes portfolioJobsSliderCarousel {

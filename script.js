@@ -605,10 +605,11 @@ const portfolioCatalog = {
       theme: "electric",
     },
     {
-      title: "Mobile Suite",
-      meta: "Application UI • Product Design",
-      layout: "device",
-      theme: "neon",
+      title: "Android Suite",
+      meta: "Android App • Finance, Health, Smart Home",
+      layout: "mobile",
+      theme: "electric",
+      preview: "android-slider",
     },
   ],
 };
@@ -2479,6 +2480,174 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "mobile":
+      if (card.preview === "android-slider") {
+        return `
+          <div class="${classes} portfolio-preview-android-slider">
+            <div class="portfolio-android-orbit"></div>
+            <div class="portfolio-android-phone">
+              <div class="portfolio-android-notch"></div>
+              <div class="portfolio-android-phone-screen">
+                <div class="portfolio-android-slider-stage" aria-hidden="true">
+                  <div class="portfolio-android-slider-track">
+                    <section class="portfolio-android-slide portfolio-android-slide-budget">
+                      <div class="portfolio-android-budget-balance">
+                        <span>Total Balance</span>
+                        <strong>$42,560.80</strong>
+                        <p>+2.4% from last month</p>
+                      </div>
+                      <div class="portfolio-android-budget-chart">
+                        <div class="portfolio-android-card-head">
+                          <strong>Weekly Analysis</strong>
+                          <span>•••</span>
+                        </div>
+                        <div class="portfolio-android-chart-grid">
+                          <i></i>
+                          <div class="portfolio-android-chart-labels">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="portfolio-android-budget-transactions">
+                        <div class="portfolio-android-card-head">
+                          <strong>Recent Transactions</strong>
+                          <span>View All</span>
+                        </div>
+                        <article>
+                          <i class="is-food"></i>
+                          <div>
+                            <strong>Artisanal Bakery</strong>
+                            <p>Food & Dining • Today</p>
+                          </div>
+                          <b>-$24.50</b>
+                        </article>
+                        <article>
+                          <i class="is-transit"></i>
+                          <div>
+                            <strong>City Transit</strong>
+                            <p>Transport • Yesterday</p>
+                          </div>
+                          <b>-$2.75</b>
+                        </article>
+                        <article>
+                          <i class="is-fashion"></i>
+                          <div>
+                            <strong>Modern Apparel</strong>
+                            <p>Shopping • Oct 12</p>
+                          </div>
+                          <b>-$120.00</b>
+                        </article>
+                      </div>
+                      <div class="portfolio-android-bottomnav">
+                        <span class="is-active">Home</span>
+                        <span>Analysis</span>
+                        <span>Budgets</span>
+                        <span>Settings</span>
+                      </div>
+                    </section>
+
+                    <section class="portfolio-android-slide portfolio-android-slide-health">
+                      <div class="portfolio-android-health-topbar">
+                        <div class="portfolio-android-health-user">
+                          <i></i>
+                          <strong>Health Pulse</strong>
+                        </div>
+                        <span>+</span>
+                      </div>
+                      <div class="portfolio-android-health-ringcard">
+                        <div class="portfolio-android-health-ring">
+                          <strong>8,420</strong>
+                          <p>Steps / 10,000</p>
+                        </div>
+                        <div class="portfolio-android-health-banner">Almost there! You're in the top 5% today.</div>
+                      </div>
+                      <div class="portfolio-android-health-stats">
+                        <article>
+                          <span>Calories Burned</span>
+                          <strong>642 kcal</strong>
+                        </article>
+                        <article>
+                          <span>Sleep Hours</span>
+                          <strong>7.5 hrs</strong>
+                        </article>
+                        <article>
+                          <span>Water Intake</span>
+                          <strong>1.8 L</strong>
+                        </article>
+                      </div>
+                      <div class="portfolio-android-health-workouts">
+                        <div class="portfolio-android-card-head">
+                          <strong>Upcoming Workouts</strong>
+                          <b>+</b>
+                        </div>
+                      </div>
+                      <div class="portfolio-android-bottomnav">
+                        <span class="is-active">Stats</span>
+                        <span>Workout</span>
+                        <span>Diet</span>
+                        <span>Profile</span>
+                      </div>
+                    </section>
+
+                    <section class="portfolio-android-slide portfolio-android-slide-home">
+                      <div class="portfolio-android-home-topbar">
+                        <strong>Smart Home</strong>
+                        <span>≡</span>
+                      </div>
+                      <div class="portfolio-android-home-hero">
+                        <div>
+                          <h5>Welcome Home, Alex</h5>
+                          <p>Everything is running smoothly.</p>
+                        </div>
+                        <article>
+                          <strong>24°C</strong>
+                          <p>Sunny, London</p>
+                        </article>
+                      </div>
+                      <div class="portfolio-android-home-card is-light">
+                        <div>
+                          <span>ACTIVE</span>
+                          <strong>Living Room Lights</strong>
+                          <p>80% Intensity • Warm White</p>
+                        </div>
+                        <i></i>
+                      </div>
+                      <div class="portfolio-android-home-card is-purple">
+                        <span>COOLING</span>
+                        <strong>21°</strong>
+                        <p>Target Temp</p>
+                        <div class="portfolio-android-home-slider">
+                          <em>16°</em>
+                          <i></i>
+                          <em>30°</em>
+                        </div>
+                        <b>AC System</b>
+                      </div>
+                      <div class="portfolio-android-bottomnav">
+                        <span class="is-active">Control</span>
+                        <span>Scenes</span>
+                        <span>History</span>
+                        <span>Safety</span>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-android-slider-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="${classes}">
           <div class="portfolio-mobile-orbit"></div>

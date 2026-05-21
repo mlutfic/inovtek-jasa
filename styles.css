@@ -1733,6 +1733,196 @@ img {
   width: 46%;
 }
 
+.portfolio-preview-arsitekutama .portfolio-workspace-monitor {
+  padding: 14px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, #d5dfec 0%, #eef2f8 100%);
+  box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site::before {
+  content: "";
+  position: absolute;
+  inset: 36px 0 0;
+  background:
+    linear-gradient(90deg, rgba(13, 19, 28, 0.78) 0%, rgba(13, 19, 28, 0.6) 34%, rgba(13, 19, 28, 0.18) 56%, rgba(13, 19, 28, 0.06) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
+  z-index: 2;
+  pointer-events: none;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site::after {
+  content: "";
+  position: absolute;
+  inset: 36px 0 0;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(196, 223, 255, 0.24), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 48%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  height: 36px;
+  padding: 0 16px;
+  background: rgba(251, 252, 255, 0.96);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-brand {
+  color: #121417;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  color: rgba(18, 20, 23, 0.76);
+  font-size: 0.32rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-nav span:first-child {
+  color: #a6781f;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-cta {
+  margin-left: auto;
+  padding: 0.42rem 0.72rem;
+  border-radius: 2px;
+  background: #090909;
+  color: #ffffff;
+  font-size: 0.34rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-building {
+  position: absolute;
+  inset: 36px 0 0;
+  background:
+    linear-gradient(180deg, rgba(124, 147, 173, 0.84) 0%, rgba(69, 88, 113, 0.92) 28%, rgba(22, 31, 44, 0.94) 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-building::before,
+.portfolio-preview-arsitekutama .portfolio-workspace-site-building::after {
+  content: "";
+  position: absolute;
+  bottom: -22%;
+  background:
+    linear-gradient(180deg, rgba(182, 211, 255, 0.32), rgba(28, 44, 66, 0.05) 22%, rgba(10, 15, 23, 0.72) 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(8, 12, 18, 0.92) 0 8px,
+      rgba(73, 103, 141, 0.9) 8px 22px,
+      rgba(14, 23, 34, 0.96) 22px 28px
+    );
+  box-shadow:
+    inset 1px 0 0 rgba(255, 255, 255, 0.18),
+    0 18px 28px rgba(0, 0, 0, 0.28);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-building::before {
+  left: -3%;
+  width: 37%;
+  height: 138%;
+  transform: skewX(-18deg);
+  filter: brightness(0.78);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-building::after {
+  right: 4%;
+  width: 46%;
+  height: 150%;
+  transform: skewX(-14deg);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-hero {
+  position: absolute;
+  top: 66px;
+  left: 20px;
+  z-index: 3;
+  width: min(42%, 190px);
+  color: #ffffff;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-kicker {
+  display: block;
+  color: #c8a362;
+  font-size: 0.34rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-hero h4 {
+  margin: 0.45rem 0 0.5rem;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.52rem;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-hero p {
+  margin: 0;
+  color: rgba(244, 247, 252, 0.82);
+  font-size: 0.44rem;
+  line-height: 1.55;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-actions {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-actions span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.44rem 0.68rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f8fbff;
+  font-size: 0.34rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-actions span:first-child {
+  border-color: rgba(198, 146, 43, 0.86);
+  background: #b98827;
+  color: #fff9ea;
+}
+
 .portfolio-layout-browser .portfolio-browser-shell {
   position: absolute;
   inset: 18px;

@@ -455,10 +455,11 @@ const portfolioCatalog = {
       theme: "ocean",
     },
     {
-      title: "Institution Identity",
-      meta: "Institution Website • Branding",
+      title: "ArsitekUtama",
+      meta: "Website Company Profile • Architecture",
       layout: "workspace",
       theme: "sky",
+      preview: "arsitekutama",
     },
   ],
   "portal-berita": [
@@ -677,6 +678,47 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "workspace":
+      if (card.preview === "arsitekutama") {
+        return `
+          <div class="${classes} portfolio-preview-arsitekutama">
+            <div class="portfolio-workspace-monitor">
+              <div class="portfolio-workspace-site">
+                <div class="portfolio-workspace-site-topbar">
+                  <span class="portfolio-workspace-site-brand">ArsitekUtama</span>
+                  <div class="portfolio-workspace-site-nav">
+                    <span>Beranda</span>
+                    <span>Layanan</span>
+                    <span>Tentang Kami</span>
+                    <span>Proyek</span>
+                    <span>Kontak</span>
+                  </div>
+                  <span class="portfolio-workspace-site-cta">Konsultasi</span>
+                </div>
+                <div class="portfolio-workspace-site-building" aria-hidden="true"></div>
+                <div class="portfolio-workspace-site-hero">
+                  <span class="portfolio-workspace-site-kicker">Karya Arsitektur Visioner</span>
+                  <h4>
+                    Membangun Masa Depan
+                    <br />
+                    Dengan Integritas &amp;
+                    <br />
+                    Estetika.
+                  </h4>
+                  <p>
+                    Kami menghadirkan solusi arsitektur premium dengan pendekatan fungsional
+                    modern dan detail yang presisi untuk korporasi dan hunian eksklusif.
+                  </p>
+                  <div class="portfolio-workspace-site-actions">
+                    <span>Jelajahi Proyek</span>
+                    <span>Tentang Kami</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="${classes}">
           <div class="portfolio-workspace-monitor">

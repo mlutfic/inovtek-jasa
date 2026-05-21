@@ -530,10 +530,11 @@ const portfolioCatalog = {
       theme: "royal",
     },
     {
-      title: "Student Portal",
-      meta: "KRS & Nilai • Dashboard",
-      layout: "panels",
+      title: "SIA Dashboard Suite",
+      meta: "SIAKAD • Portal, Campus, Analytics",
+      layout: "browser",
       theme: "navy",
+      preview: "sia-slider",
     },
   ],
   "landing-page": [
@@ -855,6 +856,207 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "sia-slider") {
+        return `
+          <div class="${classes} portfolio-preview-sia-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-sia-slider-stage" aria-hidden="true">
+                <div class="portfolio-sia-slider-track">
+                  <section class="portfolio-sia-slide portfolio-sia-slide-classic">
+                    <div class="portfolio-sia-classic-topbar">
+                      <strong>SIAKAD Universitas</strong>
+                      <div class="portfolio-sia-classic-nav">
+                        <span class="is-active">Portal</span>
+                        <span>Akademik</span>
+                        <span>Layanan</span>
+                      </div>
+                      <div class="portfolio-sia-classic-actions">
+                        <span>Cari layanan...</span>
+                        <i></i>
+                        <b>Aditya Pramana</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-sia-classic-grid">
+                      <aside class="portfolio-sia-classic-sidebar">
+                        <span>Portal Akademik</span>
+                        <p>Tahun Ajaran 2023/2024</p>
+                        <div class="portfolio-sia-classic-menu">
+                          <strong class="is-active">Beranda</strong>
+                          <strong>KRS Online</strong>
+                          <strong>Kartu Hasil Studi</strong>
+                          <strong>Jadwal Kuliah</strong>
+                          <strong>Transkrip Nilai</strong>
+                        </div>
+                        <b>Unduh Panduan</b>
+                      </aside>
+                      <div class="portfolio-sia-classic-main">
+                        <div class="portfolio-sia-classic-hero">
+                          <div class="portfolio-sia-classic-copy">
+                            <h5>Selamat Datang Kembali, Aditya.</h5>
+                            <p>
+                              Pastikan KRS dan administrasi semester ini selesai tepat waktu
+                              melalui portal akademik terpadu.
+                            </p>
+                            <div class="portfolio-sia-classic-buttons">
+                              <b>Lihat Jadwal Hari Ini</b>
+                              <b class="is-secondary">Pengumuman Terbaru</b>
+                            </div>
+                          </div>
+                          <div class="portfolio-sia-classic-seal"></div>
+                        </div>
+                        <div class="portfolio-sia-classic-stats">
+                          <article>
+                            <span>IPK</span>
+                            <strong>3.84 / 4.00</strong>
+                          </article>
+                          <article>
+                            <span>Total SKS</span>
+                            <strong>112 / 144</strong>
+                          </article>
+                          <article>
+                            <span>Status</span>
+                            <strong>Aktif</strong>
+                          </article>
+                        </div>
+                        <div class="portfolio-sia-classic-panels">
+                          <article>
+                            <h6>Jadwal Kuliah Semester Ini</h6>
+                            <p>Metodologi Penelitian Hukum • R.402</p>
+                          </article>
+                          <article>
+                            <h6>Pengumuman</h6>
+                            <p>Pendaftaran yudisium periode IV dibuka minggu ini.</p>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-sia-slide portfolio-sia-slide-campus">
+                    <div class="portfolio-sia-campus-topbar">
+                      <strong>CampusPortal</strong>
+                      <span>Cari layanan, kursus, atau bantuan...</span>
+                      <div class="portfolio-sia-campus-user">
+                        <i></i>
+                        <b>Arya Wijaya</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-sia-campus-grid">
+                      <aside class="portfolio-sia-campus-sidebar">
+                        <span>Higher Ed Excellence</span>
+                        <div class="portfolio-sia-campus-menu">
+                          <strong class="is-active">Dashboard</strong>
+                          <strong>Courses</strong>
+                          <strong>Registration</strong>
+                          <strong>Financial Aid</strong>
+                          <strong>Student Services</strong>
+                        </div>
+                        <b>Academic Calendar</b>
+                      </aside>
+                      <div class="portfolio-sia-campus-main">
+                        <div class="portfolio-sia-campus-head">
+                          <div>
+                            <h5>Halo, Arya! 👋</h5>
+                            <p>Selamat datang kembali. Berikut ikhtisar akademik Anda hari ini.</p>
+                          </div>
+                          <article>
+                            <span>Progress Semester 5</span>
+                            <strong>65%</strong>
+                          </article>
+                        </div>
+                        <div class="portfolio-sia-campus-row">
+                          <article class="is-schedule">
+                            <h6>Jadwal Hari Ini</h6>
+                            <p>08:00 Arsitektur Perangkat Lunak</p>
+                            <p>10:00 Kecerdasan Buatan</p>
+                            <p>13:30 Etika Profesi</p>
+                          </article>
+                          <article class="is-message">
+                            <h6>Pesan dari Dosen</h6>
+                            <p>Materi arsitektur perangkat lunak sudah tersedia untuk pertemuan berikutnya.</p>
+                          </article>
+                        </div>
+                        <div class="portfolio-sia-campus-row">
+                          <article class="is-task">
+                            <h6>Tugas Mendatang</h6>
+                            <p>Implementasi Linear Regression • Besok 23:59</p>
+                          </article>
+                          <article class="is-ipk">
+                            <h6>Indeks Prestasi Kumulatif</h6>
+                            <strong>3.88</strong>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-sia-slide portfolio-sia-slide-node">
+                    <div class="portfolio-sia-node-shell">
+                      <aside class="portfolio-sia-node-sidebar">
+                        <strong>NODE_01</strong>
+                        <p>Engineering Faculty</p>
+                        <div class="portfolio-sia-node-menu">
+                          <span class="is-active">Terminal</span>
+                          <span>Nodes</span>
+                          <span>Curriculum</span>
+                          <span>Research</span>
+                          <span>Archive</span>
+                        </div>
+                        <b>Sync Data</b>
+                      </aside>
+                      <div class="portfolio-sia-node-main">
+                        <div class="portfolio-sia-node-topbar">
+                          <strong>AETHER_OS</strong>
+                          <div class="portfolio-sia-node-tabs">
+                            <span class="is-active">Overview</span>
+                            <span>Reports</span>
+                            <span>Logs</span>
+                          </div>
+                          <div class="portfolio-sia-node-status">SYSTEM STABLE_100%</div>
+                        </div>
+                        <div class="portfolio-sia-node-grid">
+                          <article class="portfolio-sia-node-hero">
+                            <h5>Academic Dashboard</h5>
+                            <p>Data akademik real-time, performa kumulatif, dan analitik sinkron.</p>
+                            <div class="portfolio-sia-node-progress">
+                              <strong>3.88</strong>
+                              <strong>124 / 144</strong>
+                            </div>
+                          </article>
+                          <article class="portfolio-sia-node-ring">
+                            <strong>86%</strong>
+                            <p>Completion</p>
+                          </article>
+                        </div>
+                        <div class="portfolio-sia-node-panels">
+                          <article>
+                            <div class="is-heatmap"></div>
+                            <h6>Presence Heatmap</h6>
+                          </article>
+                          <article>
+                            <div class="is-stream"></div>
+                            <h6>Academic News Stream</h6>
+                          </article>
+                          <article>
+                            <div class="is-skill"></div>
+                            <h6>Skill Map</h6>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-sia-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (card.preview === "elearning-slider") {
         return `
           <div class="${classes} portfolio-preview-elearning-slider">

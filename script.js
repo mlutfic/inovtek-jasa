@@ -485,10 +485,11 @@ const portfolioCatalog = {
       theme: "sand",
     },
     {
-      title: "Shop Motion",
-      meta: "Online Store • Checkout Flow",
+      title: "Commerce Spectrum",
+      meta: "Toko Online • Luxury, Living, Tech",
       layout: "browser",
       theme: "coral",
+      preview: "shop-slider",
     },
   ],
   marketplace: [
@@ -852,6 +853,130 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "shop-slider") {
+        return `
+          <div class="${classes} portfolio-preview-shop-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-shop-slider-stage" aria-hidden="true">
+                <div class="portfolio-shop-slider-track">
+                  <section class="portfolio-shop-slide portfolio-shop-slide-luxe">
+                    <div class="portfolio-shop-luxe-topbar">
+                      <div class="portfolio-shop-luxe-nav">
+                        <span>Collections</span>
+                        <span>High Jewelry</span>
+                        <span>Timepieces</span>
+                      </div>
+                      <strong>ELIXIR LUXE</strong>
+                      <div class="portfolio-shop-luxe-icons">
+                        <span>Heritage</span>
+                        <i></i>
+                        <i></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-shop-luxe-hero">
+                      <div class="portfolio-shop-luxe-copy">
+                        <span>New Arrival</span>
+                        <h5>The Luminous Essence</h5>
+                        <p>
+                          Discover the intersection of timeless craftsmanship and contemporary
+                          elegance in our latest high jewelry collection.
+                        </p>
+                        <b>Explore Collection</b>
+                      </div>
+                      <div class="portfolio-shop-luxe-chain"></div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-shop-slide portfolio-shop-slide-lumina">
+                    <div class="portfolio-shop-lumina-topbar">
+                      <strong>LUMINA</strong>
+                      <div class="portfolio-shop-lumina-nav">
+                        <span class="is-active">Shop All</span>
+                        <span>New Arrivals</span>
+                        <span>Best Sellers</span>
+                        <span>About Us</span>
+                      </div>
+                      <div class="portfolio-shop-lumina-actions">
+                        <span>Search...</span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-shop-lumina-grid">
+                      <div class="portfolio-shop-lumina-hero">
+                        <div class="portfolio-shop-lumina-copy">
+                          <span>Curated Collection</span>
+                          <h5>Designed for Modern Living.</h5>
+                          <b>Shop The New Drops</b>
+                        </div>
+                      </div>
+                      <div class="portfolio-shop-lumina-side">
+                        <article>
+                          <h6>Sustainable Essentials</h6>
+                          <p>Eco-friendly materials for a better future.</p>
+                          <span>Explore</span>
+                        </article>
+                        <article>
+                          <h6>Best Sellers</h6>
+                          <p>Most loved items this season.</p>
+                          <span>View Top 10</span>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="portfolio-shop-lumina-footer">Trending Now</div>
+                  </section>
+
+                  <section class="portfolio-shop-slide portfolio-shop-slide-cyber">
+                    <div class="portfolio-shop-cyber-topbar">
+                      <strong>CYBER_TECH</strong>
+                      <div class="portfolio-shop-cyber-nav">
+                        <span>Market</span>
+                        <span>Drops</span>
+                        <span>Hardware</span>
+                        <span>Vault</span>
+                      </div>
+                      <div class="portfolio-shop-cyber-actions">
+                        <span>Search_system...</span>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-shop-cyber-hero">
+                      <span class="portfolio-shop-cyber-status">System Online: V2.124</span>
+                      <h5>
+                        EVOLVE YOUR
+                        <span>NEXUS.</span>
+                      </h5>
+                      <p>
+                        High-performance hardware for the next century. Engineered for speed,
+                        designed for the void, and tuned for neural link access.
+                      </p>
+                      <div class="portfolio-shop-cyber-buttons">
+                        <b>Explore Market</b>
+                        <b class="is-secondary">View Drops</b>
+                      </div>
+                      <div class="portfolio-shop-cyber-chip"></div>
+                      <div class="portfolio-shop-cyber-metrics">
+                        <span>Latency: 0.04ms</span>
+                        <span>Bandwidth: 30GB/s</span>
+                        <span>Sync Status: Active</span>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-shop-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (card.preview === "archive-news-slider") {
         return `
           <div class="${classes} portfolio-preview-news-slider">

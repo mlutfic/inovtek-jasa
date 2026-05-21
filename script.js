@@ -500,10 +500,11 @@ const portfolioCatalog = {
       theme: "plum",
     },
     {
-      title: "Trade Connect",
-      meta: "Commerce Platform • Seller App",
-      layout: "device",
+      title: "Marketplace Spectrum",
+      meta: "Marketplace • Retail, Luxury, Curated",
+      layout: "browser",
       theme: "blueberry",
+      preview: "marketplace-slider",
     },
   ],
   "e-learning": [
@@ -853,6 +854,154 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "marketplace-slider") {
+        return `
+          <div class="${classes} portfolio-preview-marketplace-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-marketplace-slider-stage" aria-hidden="true">
+                <div class="portfolio-marketplace-slider-track">
+                  <section class="portfolio-marketplace-slide portfolio-marketplace-slide-retail">
+                    <div class="portfolio-market-retail-topbar">
+                      <strong>Clarity Retail</strong>
+                      <div class="portfolio-market-retail-nav">
+                        <span class="is-active">Home</span>
+                        <span>Deals</span>
+                        <span>Best Sellers</span>
+                        <span>New Arrivals</span>
+                        <span>Support</span>
+                      </div>
+                      <div class="portfolio-market-retail-actions">
+                        <span>Search products...</span>
+                        <i></i>
+                        <i></i>
+                        <b>Sign In</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-market-retail-grid">
+                      <aside class="portfolio-market-retail-sidebar">
+                        <span>Categories</span>
+                        <div class="portfolio-market-retail-cats">
+                          <p>Electronics</p>
+                          <p>Home &amp; Garden</p>
+                          <p>Fashion</p>
+                          <p>Beauty</p>
+                          <p>Sports</p>
+                        </div>
+                      </aside>
+                      <div class="portfolio-market-retail-main">
+                        <div class="portfolio-market-retail-hero">
+                          <span>Limited Time Offer</span>
+                          <h5>Upgrade Your Tech Arsenal</h5>
+                          <p>Save up to 30% on professional workstation setups and premium accessories.</p>
+                          <b>Shop The Deal</b>
+                        </div>
+                        <div class="portfolio-market-retail-sidecards">
+                          <article>
+                            <div class="portfolio-market-retail-watch"></div>
+                            <h6>Smart Living</h6>
+                            <p>Precision in everyday routines.</p>
+                          </article>
+                          <article class="is-sale">
+                            <h6>Flash Sale</h6>
+                            <p>Ends in 02:45:12</p>
+                            <span>Explore Now</span>
+                          </article>
+                        </div>
+                        <div class="portfolio-market-retail-icons">
+                          <span>Computers</span>
+                          <span>Phones</span>
+                          <span>Audio</span>
+                          <span>Wearables</span>
+                          <span>Gaming</span>
+                        </div>
+                        <div class="portfolio-market-retail-sellers">
+                          <span>Best Sellers</span>
+                          <div class="portfolio-market-retail-products">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-marketplace-slide portfolio-marketplace-slide-ledger">
+                    <div class="portfolio-market-ledger-topbar">
+                      <strong>Digital Ledger</strong>
+                      <div class="portfolio-market-ledger-nav">
+                        <span>Collections</span>
+                        <span>Artisans</span>
+                        <span>Journal</span>
+                        <span class="is-active">Vault</span>
+                      </div>
+                      <div class="portfolio-market-ledger-icons">
+                        <i></i>
+                        <i></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-market-ledger-hero">
+                      <div class="portfolio-market-ledger-watch"></div>
+                      <div class="portfolio-market-ledger-copy">
+                        <span>Limited Acquisition</span>
+                        <h5>The Horizon Chronograph</h5>
+                        <p>
+                          A masterclass in horological precision. Limited to twenty-four serialized
+                          pieces worldwide.
+                        </p>
+                        <b>View Particulars</b>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-marketplace-slide portfolio-marketplace-slide-curated">
+                    <div class="portfolio-market-curated-shell">
+                      <div class="portfolio-market-curated-head">
+                        <span>Curated Selection</span>
+                        <h5>New Arrivals</h5>
+                      </div>
+                      <div class="portfolio-market-curated-grid">
+                        <article>
+                          <div class="is-glass"></div>
+                          <h6>The Aurora Tumbler</h6>
+                          <p>Glasswork</p>
+                          <span>£48.00</span>
+                        </article>
+                        <article>
+                          <div class="is-board"></div>
+                          <h6>Heritage Walnut Board</h6>
+                          <p>Woodwork</p>
+                          <span>£125.00</span>
+                        </article>
+                        <article>
+                          <div class="is-linen"></div>
+                          <h6>Botanical Linen Set</h6>
+                          <p>Textiles</p>
+                          <span>£65.00</span>
+                        </article>
+                        <article>
+                          <div class="is-vase"></div>
+                          <h6>Celadon Crackle Vase</h6>
+                          <p>Ceramics</p>
+                          <span>£190.00</span>
+                        </article>
+                      </div>
+                      <b>Shop Entire Collection</b>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-marketplace-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (card.preview === "shop-slider") {
         return `
           <div class="${classes} portfolio-preview-shop-slider">

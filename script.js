@@ -560,10 +560,11 @@ const portfolioCatalog = {
       theme: "sky",
     },
     {
-      title: "Student Intake",
-      meta: "School Admissions • Form",
+      title: "PPDB Journey",
+      meta: "PPDB • Home, Alur, Status",
       layout: "browser",
-      theme: "azure",
+      theme: "mint",
+      preview: "ppdb-slider",
     },
   ],
   ppob: [
@@ -949,6 +950,164 @@ function createPortfolioVisual(card) {
                 </div>
               </div>
               <div class="portfolio-landing-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (card.preview === "ppdb-slider") {
+        return `
+          <div class="${classes} portfolio-preview-ppdb-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-ppdb-slider-stage" aria-hidden="true">
+                <div class="portfolio-ppdb-slider-track">
+                  <section class="portfolio-ppdb-slide portfolio-ppdb-slide-home">
+                    <div class="portfolio-ppdb-home-topbar">
+                      <strong>PPDB Online</strong>
+                      <div class="portfolio-ppdb-home-nav">
+                        <span class="is-active">Home</span>
+                        <span>Informasi</span>
+                        <span>Alur Pendaftaran</span>
+                      </div>
+                      <b>Daftar Sekarang</b>
+                    </div>
+                    <div class="portfolio-ppdb-home-hero">
+                      <div class="portfolio-ppdb-home-copy">
+                        <span>Penerimaan Peserta Didik Baru 2024</span>
+                        <h5>Wujudkan Masa Depan Cemerlang</h5>
+                        <p>
+                          Mulailah perjalanan akademik Anda bersama lembaga pendidikan unggul
+                          dengan proses pendaftaran yang rapi dan mudah diikuti.
+                        </p>
+                        <div class="portfolio-ppdb-home-buttons">
+                          <b>Mulai Pendaftaran</b>
+                          <b class="is-secondary">Lihat Panduan</b>
+                        </div>
+                      </div>
+                      <div class="portfolio-ppdb-home-corridor">
+                        <i></i>
+                        <em class="is-first"></em>
+                        <em class="is-second"></em>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-ppdb-slide portfolio-ppdb-slide-flow">
+                    <div class="portfolio-ppdb-flow-topbar">
+                      <strong>PPDB Online</strong>
+                      <div class="portfolio-ppdb-flow-nav">
+                        <span>Home</span>
+                        <span>Informasi</span>
+                        <span class="is-active">Alur Pendaftaran</span>
+                      </div>
+                      <b>Daftar Sekarang</b>
+                    </div>
+                    <div class="portfolio-ppdb-flow-main">
+                      <div class="portfolio-ppdb-flow-head">
+                        <h5>Panduan Alur Pendaftaran</h5>
+                        <p>
+                          Langkah transparan dan mudah diikuti untuk memproses pendaftaran
+                          putra-putri Anda ke lembaga pendidikan kami.
+                        </p>
+                      </div>
+                      <div class="portfolio-ppdb-flow-steps">
+                        <article>
+                          <span>Langkah 1</span>
+                          <strong>Pembuatan Akun</strong>
+                          <p>Registrasi email aktif untuk memulai proses pendaftaran.</p>
+                        </article>
+                        <article>
+                          <span>Langkah 2</span>
+                          <strong>Pengisian Data</strong>
+                          <p>Lengkapi biodata calon siswa, orang tua, dan alamat domisili.</p>
+                        </article>
+                        <article>
+                          <span>Langkah 3</span>
+                          <strong>Unggah Dokumen</strong>
+                          <p>Unggah KK, akta lahir, rapor, dan pas foto sesuai format.</p>
+                        </article>
+                        <article>
+                          <span>Langkah 4</span>
+                          <strong>Verifikasi Lapangan</strong>
+                          <p>Kunjungan singkat untuk validasi data dan berkas fisik.</p>
+                        </article>
+                        <article class="is-accent">
+                          <span>Langkah 5</span>
+                          <strong>Pengumuman</strong>
+                          <p>Hasil seleksi akhir dapat dilihat pada portal resmi sesuai jadwal.</p>
+                        </article>
+                      </div>
+                      <div class="portfolio-ppdb-flow-note">
+                        Penting untuk diketahui: seluruh tahapan dapat dipantau real-time melalui
+                        dashboard peserta.
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-ppdb-slide portfolio-ppdb-slide-status">
+                    <div class="portfolio-ppdb-status-topbar">
+                      <strong>PPDB Online</strong>
+                      <div class="portfolio-ppdb-status-nav">
+                        <span>Home</span>
+                        <span>Informasi</span>
+                        <span>Alur Pendaftaran</span>
+                        <span class="is-active">Status Seleksi</span>
+                      </div>
+                      <b>Daftar Sekarang</b>
+                    </div>
+                    <div class="portfolio-ppdb-status-main">
+                      <div class="portfolio-ppdb-status-head">
+                        <h5>Cek Status Seleksi</h5>
+                        <p>
+                          Masukkan NISN atau nomor pendaftaran untuk melihat status verifikasi dan
+                          peringkat sementara.
+                        </p>
+                      </div>
+                      <div class="portfolio-ppdb-status-search">
+                        <span>Masukkan NISN atau No. Pendaftaran</span>
+                        <b>Cari Data</b>
+                      </div>
+                      <div class="portfolio-ppdb-status-grid">
+                        <article class="portfolio-ppdb-status-card">
+                          <div class="portfolio-ppdb-status-card-head">
+                            <div>
+                              <strong>Aditya Dharmawan</strong>
+                              <p>NISN: 0098765432</p>
+                            </div>
+                            <span>Lolos Seleksi</span>
+                          </div>
+                          <div class="portfolio-ppdb-status-card-info">
+                            <p>Sekolah Asal: SMP Negeri 1 Jakarta</p>
+                            <p>Pilihan Sekolah: SMA Negeri 70 Jakarta</p>
+                            <p>Jalur: Zonasi Reguler</p>
+                            <p>Skor / Jarak: 850 m</p>
+                          </div>
+                          <div class="portfolio-ppdb-status-actions">
+                            <b>Cetak Bukti Pendaftaran</b>
+                            <b class="is-secondary">Hubungi Bantuan</b>
+                          </div>
+                        </article>
+                        <div class="portfolio-ppdb-status-side">
+                          <article class="portfolio-ppdb-status-panel">
+                            <div class="portfolio-ppdb-status-campus"></div>
+                            <strong>Informasi Terbaru</strong>
+                            <p>Pengumuman akhir hasil seleksi akan diumumkan pada 12 Juli 2024.</p>
+                          </article>
+                          <article class="portfolio-ppdb-status-panel is-next">
+                            <strong>Langkah Selanjutnya</strong>
+                            <p>Lakukan daftar ulang dan verifikasi berkas sesuai jadwal.</p>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-ppdb-slider-dots" aria-hidden="true">
                 <span></span>
                 <span></span>
                 <span></span>

@@ -694,24 +694,141 @@ function createPortfolioVisual(card) {
                   </div>
                   <span class="portfolio-workspace-site-cta">Konsultasi</span>
                 </div>
-                <div class="portfolio-workspace-site-building" aria-hidden="true"></div>
-                <div class="portfolio-workspace-site-hero">
-                  <span class="portfolio-workspace-site-kicker">Karya Arsitektur Visioner</span>
-                  <h4>
-                    Membangun Masa Depan
-                    <br />
-                    Dengan Integritas &amp;
-                    <br />
-                    Estetika.
-                  </h4>
-                  <p>
-                    Kami menghadirkan solusi arsitektur premium dengan pendekatan fungsional
-                    modern dan detail yang presisi untuk korporasi dan hunian eksklusif.
-                  </p>
-                  <div class="portfolio-workspace-site-actions">
-                    <span>Jelajahi Proyek</span>
-                    <span>Tentang Kami</span>
+                <div class="portfolio-workspace-site-stage" aria-hidden="true">
+                  <div class="portfolio-workspace-site-track">
+                    <section class="portfolio-workspace-slide portfolio-workspace-slide-values">
+                      <div class="portfolio-workspace-values-top">
+                        <article class="portfolio-workspace-value-card">
+                          <span class="portfolio-workspace-value-icon"></span>
+                          <h5>Etika Hijau</h5>
+                          <p>
+                            Menyatukan solusi hemat energi dan material ramah lingkungan untuk
+                            setiap konstruksi.
+                          </p>
+                        </article>
+                        <article class="portfolio-workspace-partner-card">
+                          <div>
+                            <span class="portfolio-workspace-kicker">Kemitraan Strategis</span>
+                            <p>
+                              Hubungan jangka panjang yang dibangun di atas transparansi,
+                              akuntabilitas, dan pencapaian target tepat waktu.
+                            </p>
+                          </div>
+                          <div class="portfolio-workspace-partner-photo"></div>
+                        </article>
+                      </div>
+                      <div class="portfolio-workspace-team-head">
+                        <div>
+                          <span class="portfolio-workspace-eyebrow">Para Ahli Kami</span>
+                          <h5>Tim Kepemimpinan</h5>
+                        </div>
+                        <p>
+                          Dipandu visi para pionir yang mendedikasikan hidupnya untuk kemajuan
+                          dunia arsitektur.
+                        </p>
+                      </div>
+                      <div class="portfolio-workspace-team-grid">
+                        <span class="portfolio-workspace-portrait is-one"></span>
+                        <span class="portfolio-workspace-portrait is-two"></span>
+                        <span class="portfolio-workspace-portrait is-three"></span>
+                        <span class="portfolio-workspace-portrait is-four"></span>
+                      </div>
+                    </section>
+
+                    <section class="portfolio-workspace-slide portfolio-workspace-slide-services">
+                      <div class="portfolio-workspace-services-grid">
+                        <div class="portfolio-workspace-building-shot"></div>
+                        <aside class="portfolio-workspace-services-side">
+                          <span class="portfolio-workspace-eyebrow">Estetika Dalam</span>
+                          <h5>Desain Interior Eksklusif</h5>
+                          <p>
+                            Ruang interior premium yang fungsional, mewah, dan meningkatkan
+                            kualitas hidup penghuninya.
+                          </p>
+                          <div class="portfolio-workspace-room-shot"></div>
+                        </aside>
+                      </div>
+                      <div class="portfolio-workspace-services-bottom">
+                        <article class="portfolio-workspace-services-main">
+                          <h5>Desain Arsitektur &amp; Konsep</h5>
+                          <p>
+                            Visi kreatif yang dipadukan dengan kelayakan teknis untuk menghadirkan
+                            identitas bangunan yang kuat.
+                          </p>
+                          <div class="portfolio-workspace-services-list">
+                            <span>Master Planning</span>
+                            <span>Pengembangan Skematik</span>
+                            <span>Visualisasi 3D Realistik</span>
+                            <span>Dokumentasi Teknis</span>
+                          </div>
+                        </article>
+                        <article class="portfolio-workspace-services-card">
+                          <h6>Urban Planning</h6>
+                          <p>
+                            Kawasan terpadu yang mempertimbangkan sirkulasi, lingkungan, dan
+                            infrastruktur masa depan.
+                          </p>
+                        </article>
+                        <article class="portfolio-workspace-services-card is-compact">
+                          <h6>Manajemen Proyek Terpadu</h6>
+                          <p>Pengawasan detail konstruksi dengan kontrol mutu dan ketepatan waktu.</p>
+                          <div class="portfolio-workspace-services-thumb"></div>
+                        </article>
+                      </div>
+                    </section>
+
+                    <section class="portfolio-workspace-slide portfolio-workspace-slide-footer">
+                      <div class="portfolio-workspace-cta-panel">
+                        <h5>Wujudkan Visi Arsitektur Anda Bersama Kami.</h5>
+                        <p>
+                          Konsultasikan kebutuhan proyek Anda dan dapatkan solusi desain yang
+                          elegan serta bernilai tinggi.
+                        </p>
+                        <div class="portfolio-workspace-cta-actions">
+                          <span class="is-primary">Hubungi Sekarang</span>
+                          <span class="is-phone">+62 21 555 8888</span>
+                        </div>
+                      </div>
+                      <div class="portfolio-workspace-footer-grid">
+                        <div class="portfolio-workspace-footer-brand">
+                          <strong>ArsitekUtama</strong>
+                          <p>
+                            Menciptakan ruang yang menginspirasi dan berkelanjutan dengan sentuhan
+                            kemewahan modern.
+                          </p>
+                        </div>
+                        <div class="portfolio-workspace-footer-links">
+                          <span>Turun Cepat</span>
+                          <span>Tentang Kami</span>
+                          <span>Layanan</span>
+                          <span>Proyek</span>
+                        </div>
+                        <div class="portfolio-workspace-footer-links">
+                          <span>Layanan</span>
+                          <span>Kebijakan Privasi</span>
+                          <span>Syarat &amp; Ketentuan</span>
+                          <span>Peta Situs</span>
+                        </div>
+                        <div class="portfolio-workspace-footer-contact">
+                          <span>Kantor Pusat</span>
+                          <p>
+                            Sudirman Central Business District
+                            <br />
+                            Jakarta Selatan
+                          </p>
+                          <p>E: contact@arsitekutama.com</p>
+                        </div>
+                      </div>
+                      <span class="portfolio-workspace-footer-note">
+                        &copy; 2024 Arsitek Utama. Seluruh Hak Cipta Dilindungi.
+                      </span>
+                    </section>
                   </div>
+                </div>
+                <div class="portfolio-workspace-site-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
             </div>

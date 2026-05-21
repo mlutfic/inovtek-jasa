@@ -1742,31 +1742,9 @@ img {
   height: 100%;
   overflow: hidden;
   border-radius: 12px;
-  background:
-    linear-gradient(180deg, #d5dfec 0%, #eef2f8 100%);
+  background: linear-gradient(180deg, #e4e9f4 0%, #f5f7fc 100%);
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
-}
-
-.portfolio-preview-arsitekutama .portfolio-workspace-site::before {
-  content: "";
-  position: absolute;
-  inset: 36px 0 0;
-  background:
-    linear-gradient(90deg, rgba(13, 19, 28, 0.78) 0%, rgba(13, 19, 28, 0.6) 34%, rgba(13, 19, 28, 0.18) 56%, rgba(13, 19, 28, 0.06) 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
-  z-index: 2;
-  pointer-events: none;
-}
-
-.portfolio-preview-arsitekutama .portfolio-workspace-site::after {
-  content: "";
-  position: absolute;
-  inset: 36px 0 0;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(196, 223, 255, 0.24), transparent 22%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 48%);
-  z-index: 2;
-  pointer-events: none;
+  isolation: isolate;
 }
 
 .portfolio-preview-arsitekutama .portfolio-workspace-site-topbar {
@@ -1823,104 +1801,498 @@ img {
   white-space: nowrap;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-building {
+.portfolio-preview-arsitekutama .portfolio-workspace-site-stage {
   position: absolute;
   inset: 36px 0 0;
-  background:
-    linear-gradient(180deg, rgba(124, 147, 173, 0.84) 0%, rgba(69, 88, 113, 0.92) 28%, rgba(22, 31, 44, 0.94) 100%);
+  overflow: hidden;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-building::before,
-.portfolio-preview-arsitekutama .portfolio-workspace-site-building::after {
-  content: "";
-  position: absolute;
-  bottom: -22%;
-  background:
-    linear-gradient(180deg, rgba(182, 211, 255, 0.32), rgba(28, 44, 66, 0.05) 22%, rgba(10, 15, 23, 0.72) 100%),
-    repeating-linear-gradient(
-      90deg,
-      rgba(8, 12, 18, 0.92) 0 8px,
-      rgba(73, 103, 141, 0.9) 8px 22px,
-      rgba(14, 23, 34, 0.96) 22px 28px
-    );
-  box-shadow:
-    inset 1px 0 0 rgba(255, 255, 255, 0.18),
-    0 18px 28px rgba(0, 0, 0, 0.28);
+.portfolio-preview-arsitekutama .portfolio-workspace-site-track {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: portfolioArsitekutamaCarousel 18s ease-in-out infinite;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-building::before {
-  left: -3%;
-  width: 37%;
-  height: 138%;
-  transform: skewX(-18deg);
-  filter: brightness(0.78);
+.portfolio-preview-arsitekutama:hover .portfolio-workspace-site-track {
+  animation-play-state: paused;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-building::after {
-  right: 4%;
-  width: 46%;
-  height: 150%;
-  transform: skewX(-14deg);
+.portfolio-preview-arsitekutama .portfolio-workspace-slide {
+  flex: 0 0 33.3333%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 10px 12px 14px;
+  overflow: hidden;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-hero {
-  position: absolute;
-  top: 66px;
-  left: 20px;
-  z-index: 3;
-  width: min(42%, 190px);
-  color: #ffffff;
+.portfolio-preview-arsitekutama .portfolio-workspace-slide h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-slide h6 {
+  margin: 0;
+  color: #16171b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.04em;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-kicker {
+.portfolio-preview-arsitekutama .portfolio-workspace-slide p {
+  margin: 0;
+  color: rgba(31, 35, 45, 0.78);
+  font-size: 0.36rem;
+  line-height: 1.42;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-kicker,
+.portfolio-preview-arsitekutama .portfolio-workspace-eyebrow {
   display: block;
-  color: #c8a362;
-  font-size: 0.34rem;
+  color: #bb8a2d;
+  font-size: 0.28rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-hero h4 {
-  margin: 0.45rem 0 0.5rem;
+.portfolio-preview-arsitekutama .portfolio-workspace-slide-values {
+  background: linear-gradient(180deg, #f6f5fc 0%, #f0f1fa 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-values-top {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 8px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-value-card,
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-card,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-main,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-card {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-value-card {
+  padding: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f6fd 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-value-icon {
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 8px;
+  border: 1.5px solid #c3912b;
+  border-radius: 3px;
+  transform: rotate(18deg);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-value-card h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-card h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-team-head h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-main h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-side h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-panel h5 {
+  font-size: 0.72rem;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-value-card p {
+  margin-top: 6px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-card {
+  display: grid;
+  grid-template-columns: 0.92fr 0.78fr;
+  gap: 8px;
+  padding: 10px;
+  background: linear-gradient(135deg, #8d6d15 0%, #916f0d 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-card p,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-side p,
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-panel p {
+  color: rgba(255, 247, 226, 0.8);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-photo {
+  min-height: 54px;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(28, 16, 4, 0.1), rgba(28, 16, 4, 0.56)),
+    radial-gradient(circle at 28% 20%, rgba(248, 201, 91, 0.55), transparent 12%),
+    linear-gradient(135deg, #6c4710 0%, #8f6321 54%, #38240d 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-photo::before,
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-photo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 34%;
+  height: 76%;
+  border-radius: 18px 18px 4px 4px;
+  background:
+    linear-gradient(180deg, rgba(18, 12, 5, 0.1), rgba(18, 12, 5, 0.7)),
+    linear-gradient(180deg, #f0c07e 0%, #a36226 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-photo::before {
+  left: 18%;
+  transform: rotate(-12deg);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-partner-photo::after {
+  right: 18%;
+  transform: rotate(8deg);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-team-head {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: end;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  min-height: 56px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 255, 255, 0.22), transparent 18%),
+    linear-gradient(180deg, #74767e 0%, #2d2f36 52%, #17181d 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #d7d9dc 0%, #aeb2b9 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 72%;
+  height: 66%;
+  border-radius: 28px 28px 0 0;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, #f8f9fb 0%, #b0b4bb 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait.is-two::before {
+  width: 17px;
+  height: 20px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait.is-three::after {
+  width: 80%;
+  height: 64%;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-portrait.is-four::after {
+  width: 70%;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-slide-services {
+  background: linear-gradient(180deg, #f7f5fb 0%, #f0f1fa 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.68fr;
+  gap: 8px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-building-shot {
+  position: relative;
+  min-height: 78px;
+  overflow: hidden;
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(250, 251, 255, 0.96) 0%, rgba(209, 213, 220, 0.94) 62%, rgba(126, 132, 144, 0.98) 100%);
+  box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.05);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-building-shot::before {
+  content: "";
+  position: absolute;
+  left: 28%;
+  right: 8%;
+  bottom: 22px;
+  height: 38px;
+  background:
+    linear-gradient(90deg, rgba(235, 237, 240, 0.92), rgba(173, 178, 187, 0.98)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(56, 60, 67, 0.42) 0 2px,
+      rgba(214, 217, 222, 0.08) 2px 10px
+    );
+  clip-path: polygon(0 0, 92% 0, 100% 18%, 100% 100%, 0 100%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-building-shot::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 20px;
+  background:
+    linear-gradient(180deg, rgba(186, 190, 198, 0.12), rgba(104, 109, 118, 0.44)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(90, 94, 103, 0.14));
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-side {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #181838 0%, #1f1d46 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-side h5,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-side .portfolio-workspace-eyebrow {
   color: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.52rem;
-  line-height: 0.94;
-  letter-spacing: -0.06em;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-hero p {
-  margin: 0;
-  color: rgba(244, 247, 252, 0.82);
-  font-size: 0.44rem;
-  line-height: 1.55;
+.portfolio-preview-arsitekutama .portfolio-workspace-room-shot {
+  min-height: 42px;
+  margin-top: auto;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 68% 20%, rgba(255, 186, 79, 0.58), transparent 12%),
+    linear-gradient(180deg, rgba(14, 14, 23, 0.18), rgba(14, 14, 23, 0.72)),
+    repeating-linear-gradient(
+      90deg,
+      #3a2a1b 0 10px,
+      #5b4127 10px 26px,
+      #332515 26px 34px
+    );
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-actions {
+.portfolio-preview-arsitekutama .portfolio-workspace-services-bottom {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+  min-height: 0;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-main {
+  grid-row: 1 / 3;
+  padding: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f7fc 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-main p,
+.portfolio-preview-arsitekutama .portfolio-workspace-services-card p,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-brand p,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-contact p {
+  margin-top: 6px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 8px;
+  margin-top: 8px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-list span {
+  color: #6b5020;
+  font-size: 0.3rem;
+  font-weight: 700;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-card {
+  padding: 10px;
+  background: linear-gradient(180deg, #f5f4ff 0%, #ececf7 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-card h6 {
+  font-size: 0.52rem;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-card.is-compact {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-services-thumb {
+  min-height: 22px;
+  margin-top: auto;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(137, 143, 154, 0.8) 0 5px,
+      rgba(219, 222, 227, 0.94) 5px 13px
+    );
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-slide-footer {
+  background: linear-gradient(180deg, #eff1fb 0%, #f6f7fc 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-panel {
+  padding: 12px 14px;
+  border-radius: 10px 10px 0 0;
+  background:
+    linear-gradient(102deg, #171736 0%, #1c1d42 82%, #24244d 100%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-panel h5 {
+  color: #ffffff;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-actions {
   display: flex;
-  gap: 0.45rem;
-  margin-top: 0.7rem;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-actions span {
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-actions span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.44rem 0.68rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #f8fbff;
-  font-size: 0.34rem;
+  min-height: 20px;
+  padding: 0.34rem 0.64rem;
+  color: #d9dcec;
+  font-size: 0.31rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  white-space: nowrap;
-  background: rgba(255, 255, 255, 0.06);
 }
 
-.portfolio-preview-arsitekutama .portfolio-workspace-site-actions span:first-child {
-  border-color: rgba(198, 146, 43, 0.86);
-  background: #b98827;
-  color: #fff9ea;
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-actions .is-primary {
+  background: #ac8127;
+  color: #fff8e9;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-cta-actions .is-phone {
+  padding-left: 0.8rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 0.7fr 0.95fr;
+  gap: 10px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-brand strong,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-links span:first-child,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-contact span {
+  display: block;
+  color: #1a1d25;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.43rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-links {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-links span,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-contact p,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-brand p,
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-note {
+  color: rgba(47, 50, 61, 0.72);
+  font-size: 0.3rem;
+  line-height: 1.42;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-footer-note {
+  margin-top: auto;
+  padding-bottom: 2px;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 7px;
+  z-index: 4;
+  display: flex;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(26, 29, 37, 0.22);
+  animation: portfolioArsitekutamaDot 18s infinite;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-dots span:nth-child(2) {
+  animation-delay: 6s;
+}
+
+.portfolio-preview-arsitekutama .portfolio-workspace-site-dots span:nth-child(3) {
+  animation-delay: 12s;
+}
+
+@keyframes portfolioArsitekutamaCarousel {
+  0%,
+  27% {
+    transform: translateX(0);
+  }
+  33%,
+  60% {
+    transform: translateX(-33.3333%);
+  }
+  66%,
+  93% {
+    transform: translateX(-66.6667%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes portfolioArsitekutamaDot {
+  0%,
+  15% {
+    transform: scale(1.08);
+    background: rgba(26, 29, 37, 0.86);
+  }
+  24%,
+  100% {
+    transform: scale(0.84);
+    background: rgba(26, 29, 37, 0.24);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-preview-arsitekutama .portfolio-workspace-site-track,
+  .portfolio-preview-arsitekutama .portfolio-workspace-site-dots span {
+    animation: none;
+  }
 }
 
 .portfolio-layout-browser .portfolio-browser-shell {

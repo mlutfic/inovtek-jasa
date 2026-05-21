@@ -464,16 +464,25 @@ const portfolioCatalog = {
   ],
   "portal-berita": [
     {
-      title: "Headline Stream",
-      meta: "Portal Berita • Editorial",
+      title: "Archive News Classic",
+      meta: "Portal Berita • Editorial Heritage",
       layout: "browser",
       theme: "indigo",
+      preview: "archive-news-classic",
     },
     {
-      title: "Media Harian",
-      meta: "News Platform • Publishing",
+      title: "Archive News Briefing",
+      meta: "News Platform • Modern Subscriber",
+      layout: "browser",
+      theme: "sky",
+      preview: "archive-news-modern",
+    },
+    {
+      title: "Archive News Terminal",
+      meta: "Intelligence Desk • Data Vault",
       layout: "panels",
-      theme: "violet",
+      theme: "mint",
+      preview: "archive-news-terminal",
     },
   ],
   "toko-online": [
@@ -851,6 +860,124 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "archive-news-classic") {
+        return `
+          <div class="${classes} portfolio-preview-news-classic">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-news-classic-topline">
+                <span>Wednesday, Oct 23, 2024</span>
+                <strong>Archive News</strong>
+                <div>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="portfolio-news-classic-nav">
+                <span class="is-active">Politics</span>
+                <span>Economy</span>
+                <span>Culture</span>
+                <span>Opinion</span>
+                <span>Science</span>
+                <span>Archives</span>
+              </div>
+              <div class="portfolio-news-classic-breaking">Breaking: global markets react to new archive discovery</div>
+              <div class="portfolio-news-classic-grid">
+                <aside class="portfolio-news-classic-column">
+                  <span class="portfolio-news-classic-label">Opinion</span>
+                  <h5>The Erosion of Silence in the Digital Age</h5>
+                  <p>By Jonathan Morely</p>
+                  <div class="portfolio-news-classic-divider"></div>
+                  <h6>Restoring Heritage in a Modern World</h6>
+                  <p>By Elena Vance</p>
+                  <div class="portfolio-news-classic-flashback">
+                    <span>Archive Flashback</span>
+                    <p>"The strength of a nation lies in the integrity of its information."</p>
+                  </div>
+                </aside>
+                <div class="portfolio-news-classic-feature">
+                  <div class="portfolio-news-classic-photo"></div>
+                  <h5>The Silent Archive: Unearthing 100 Years of Civic Memory</h5>
+                </div>
+                <aside class="portfolio-news-classic-latest">
+                  <span class="portfolio-news-classic-label">Latest News</span>
+                  <div class="portfolio-news-classic-item">
+                    <strong>14:32</strong>
+                    <p>Prime Minister calls for emergency archive audit.</p>
+                  </div>
+                  <div class="portfolio-news-classic-item">
+                    <strong>13:05</strong>
+                    <p>Economic growth slows in response to trade rumors.</p>
+                  </div>
+                  <div class="portfolio-news-classic-item">
+                    <strong>12:20</strong>
+                    <p>Cultural heritage site restored in Central Java.</p>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (card.preview === "archive-news-modern") {
+        return `
+          <div class="${classes} portfolio-preview-news-modern">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-news-modern-topbar">
+                <div class="portfolio-news-modern-brand">
+                  <strong>Archive News</strong>
+                  <div class="portfolio-news-modern-nav">
+                    <span class="is-active">Politics</span>
+                    <span>Economy</span>
+                    <span>Technology</span>
+                    <span>Lifestyle</span>
+                    <span>Opinion</span>
+                  </div>
+                </div>
+                <div class="portfolio-news-modern-actions">
+                  <span class="portfolio-news-modern-search">Search news...</span>
+                  <span class="portfolio-news-modern-subscribe">Subscribe</span>
+                </div>
+              </div>
+              <div class="portfolio-news-modern-grid">
+                <section class="portfolio-news-modern-main">
+                  <div class="portfolio-news-modern-hero"></div>
+                  <span class="portfolio-news-modern-meta">Politics • 2 min read</span>
+                  <h5>Navigating the Global Economic Shift: What Lies Ahead for 2025</h5>
+                  <p>
+                    As central banks signal a pivot in policy, global markets prepare for a
+                    transformative era of digital assets and renewed trade alliances.
+                  </p>
+                </section>
+                <aside class="portfolio-news-modern-side">
+                  <div class="portfolio-news-modern-topics">
+                    <span>Popular Topics</span>
+                    <div class="portfolio-news-modern-topic">
+                      <strong>01</strong>
+                      <p>The Future of Urban Transit in Carbon-Neutral Cities</p>
+                    </div>
+                    <div class="portfolio-news-modern-topic">
+                      <strong>02</strong>
+                      <p>Architecture as Wellness: Designing Living Spaces</p>
+                    </div>
+                    <div class="portfolio-news-modern-topic">
+                      <strong>03</strong>
+                      <p>Why the Multi-Polar World Order Is Already Here</p>
+                    </div>
+                  </div>
+                  <div class="portfolio-news-modern-briefing">
+                    <span>The Briefing</span>
+                    <p>Direct, insightful news delivered to your inbox every morning at 7:00 AM.</p>
+                    <div>Email address</div>
+                    <button type="button">Join 50K Readers</button>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       return `
         <div class="${classes}">
           <div class="portfolio-browser-shell">
@@ -894,6 +1021,65 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "panels":
+      if (card.preview === "archive-news-terminal") {
+        return `
+          <div class="${classes} portfolio-preview-news-terminal">
+            <div class="portfolio-news-terminal-shell">
+              <aside class="portfolio-news-terminal-sidebar">
+                <strong>ARCHIVE_NEWS</strong>
+                <div class="portfolio-news-terminal-user">
+                  <span>OPERATOR_01</span>
+                  <p>Access level: Alpha</p>
+                </div>
+                <div class="portfolio-news-terminal-nav">
+                  <span class="is-active">Terminal</span>
+                  <span>Intelligence</span>
+                  <span>Data Vault</span>
+                  <span>Signal Stream</span>
+                </div>
+              </aside>
+              <div class="portfolio-news-terminal-main">
+                <div class="portfolio-news-terminal-topbar">
+                  <div class="portfolio-news-terminal-tabs">
+                    <span>Terminal</span>
+                    <span>Intelligence</span>
+                    <span>Data Vault</span>
+                  </div>
+                  <div class="portfolio-news-terminal-search">Search archive...</div>
+                </div>
+                <div class="portfolio-news-terminal-grid">
+                  <article class="portfolio-news-terminal-hero">
+                    <span class="portfolio-news-terminal-tag">Breaking</span>
+                    <h5>Neural Core: The End of Silicon Supremacy</h5>
+                    <p>
+                      Bio-computational nodes are outperforming traditional GPUs and rewriting the
+                      future of decentralized intelligence.
+                    </p>
+                    <span class="portfolio-news-terminal-button">Read Dossier</span>
+                  </article>
+                  <div class="portfolio-news-terminal-cards">
+                    <article>
+                      <span>Financial Flow</span>
+                      <h6>Digital Yuan Integrates with Mars Habitat Ledger</h6>
+                    </article>
+                    <article>
+                      <span>Protocol X</span>
+                      <h6>SpaceX Starlink V12 achieves sub-1ms latency</h6>
+                    </article>
+                  </div>
+                </div>
+                <div class="portfolio-news-terminal-metrics">
+                  <span>BTC/USDT +6.2%</span>
+                  <span>ETH/USDT -1.1%</span>
+                  <span>SOL/USDT +12.8%</span>
+                  <span>ARC/CRED Stable</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
     default:
       return `
         <div class="${classes}">

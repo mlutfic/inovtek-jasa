@@ -545,10 +545,11 @@ const portfolioCatalog = {
       theme: "rose",
     },
     {
-      title: "Promo Sprint",
-      meta: "Marketing Page • Funnel",
-      layout: "workspace",
+      title: "Landing Page Spectrum",
+      meta: "Landing Page • Wellness, Finance, Travel",
+      layout: "browser",
       theme: "sunset",
+      preview: "landing-slider",
     },
   ],
   ppdb: [
@@ -856,6 +857,107 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "landing-slider") {
+        return `
+          <div class="${classes} portfolio-preview-landing-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-landing-slider-stage" aria-hidden="true">
+                <div class="portfolio-landing-slider-track">
+                  <section class="portfolio-landing-slide portfolio-landing-slide-aura">
+                    <div class="portfolio-landing-aura-topbar">
+                      <strong>Aura</strong>
+                      <div class="portfolio-landing-aura-nav">
+                        <span>Classes</span>
+                        <span>Retreats</span>
+                        <span>Journal</span>
+                      </div>
+                      <b>Book Now</b>
+                    </div>
+                    <div class="portfolio-landing-aura-hero">
+                      <div class="portfolio-landing-aura-copy">
+                        <h5>Find Your Stillness</h5>
+                        <p>
+                          A curated retreat for mind, movement, and breath. Experience restorative
+                          practices in a calm, cinematic atmosphere.
+                        </p>
+                        <div class="portfolio-landing-aura-buttons">
+                          <b>Begin Your Journey</b>
+                          <b class="is-secondary">View Schedule</b>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-landing-slide portfolio-landing-slide-vault">
+                    <div class="portfolio-landing-vault-topbar">
+                      <strong>Vault</strong>
+                      <div class="portfolio-landing-vault-nav">
+                        <span>Features</span>
+                        <span>Security</span>
+                        <span>Pricing</span>
+                      </div>
+                      <b>Get Started</b>
+                    </div>
+                    <div class="portfolio-landing-vault-hero">
+                      <div class="portfolio-landing-vault-copy">
+                        <span>ISO 27001 Certified</span>
+                        <h5>Secure Your Financial Future</h5>
+                        <p>
+                          High-performance wealth management for the modern era with institutional-grade
+                          security and analytics.
+                        </p>
+                        <div class="portfolio-landing-vault-buttons">
+                          <b>Get Started</b>
+                          <b class="is-secondary">View Demo</b>
+                        </div>
+                      </div>
+                      <div class="portfolio-landing-vault-monitor">
+                        <div class="portfolio-landing-vault-chart"></div>
+                      </div>
+                    </div>
+                    <div class="portfolio-landing-vault-trust">Trusted by global institutions</div>
+                  </section>
+
+                  <section class="portfolio-landing-slide portfolio-landing-slide-nomad">
+                    <div class="portfolio-landing-nomad-topbar">
+                      <strong>Nomad</strong>
+                      <div class="portfolio-landing-nomad-nav">
+                        <span class="is-active">Destinations</span>
+                        <span>Expeditions</span>
+                        <span>Community</span>
+                      </div>
+                      <b>Start Exploring</b>
+                    </div>
+                    <div class="portfolio-landing-nomad-hero">
+                      <div class="portfolio-landing-nomad-copy">
+                        <h5>The World is Waiting</h5>
+                        <p>
+                          Embark on soul-stirring journeys to the most remote corners of the planet,
+                          from Patagonia to the temples of Kyoto.
+                        </p>
+                        <div class="portfolio-landing-nomad-buttons">
+                          <b>Explore Destinations</b>
+                          <b class="is-secondary">View Expeditions</b>
+                        </div>
+                      </div>
+                      <div class="portfolio-landing-nomad-card">
+                        <span>Mount Fitz Roy, Patagonia</span>
+                        <p>Current Temp: -2°C | Difficulty: Extreme</p>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-landing-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (card.preview === "sia-slider") {
         return `
           <div class="${classes} portfolio-preview-sia-slider">

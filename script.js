@@ -575,10 +575,11 @@ const portfolioCatalog = {
       theme: "gold",
     },
     {
-      title: "Transaksi Aman",
-      meta: "Utility Payment • Dashboard",
-      layout: "mobile",
-      theme: "amber",
+      title: "LuminaPay Portal",
+      meta: "PPOB • Dashboard, Top-up, History",
+      layout: "browser",
+      theme: "mint",
+      preview: "ppob-slider",
     },
   ],
   loker: [
@@ -1108,6 +1109,266 @@ function createPortfolioVisual(card) {
                 </div>
               </div>
               <div class="portfolio-ppdb-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (card.preview === "ppob-slider") {
+        return `
+          <div class="${classes} portfolio-preview-ppob-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-ppob-slider-stage" aria-hidden="true">
+                <div class="portfolio-ppob-slider-track">
+                  <section class="portfolio-ppob-slide portfolio-ppob-slide-dashboard">
+                    <div class="portfolio-ppob-shell">
+                      <aside class="portfolio-ppob-sidebar">
+                        <strong>LuminaPay</strong>
+                        <p>Institutional Utility Portal</p>
+                        <div class="portfolio-ppob-menu">
+                          <span class="is-active">Dashboard</span>
+                          <span>Electricity</span>
+                          <span>Mobile Top-up</span>
+                          <span>BPJS Health</span>
+                          <span>PDAM Water</span>
+                          <span>Transaction History</span>
+                        </div>
+                        <b>+ New Payment</b>
+                        <div class="portfolio-ppob-sidebar-meta">
+                          <span>Security Center</span>
+                          <span>Settings</span>
+                        </div>
+                      </aside>
+                      <div class="portfolio-ppob-main">
+                        <div class="portfolio-ppob-topbar">
+                          <div class="portfolio-ppob-search">Search transactions, bills, or services...</div>
+                          <div class="portfolio-ppob-topbar-meta">
+                            <i></i>
+                            <i></i>
+                            <b>Academic Admin</b>
+                          </div>
+                        </div>
+                        <div class="portfolio-ppob-dashboard-head">
+                          <article class="portfolio-ppob-hero-card">
+                            <h5>Welcome back, Central University.</h5>
+                            <p>
+                              Your institutional utility portal is healthy. You have 3 pending
+                              invoices due this week.
+                            </p>
+                          </article>
+                          <article class="portfolio-ppob-balance-card">
+                            <span>Available Balance</span>
+                            <strong>Rp 42.850.000</strong>
+                            <p>+12.5% from last month</p>
+                            <b>Top Up</b>
+                          </article>
+                        </div>
+                        <div class="portfolio-ppob-section-title">
+                          <strong>Quick Actions</strong>
+                          <span>View All Services</span>
+                        </div>
+                        <div class="portfolio-ppob-actions">
+                          <article><i></i><span>Electricity</span></article>
+                          <article><i></i><span>Mobile Top-up</span></article>
+                          <article><i></i><span>BPJS Health</span></article>
+                          <article><i></i><span>PDAM Water</span></article>
+                          <article><i></i><span>Internet/TV</span></article>
+                          <article><i></i><span>More</span></article>
+                        </div>
+                        <div class="portfolio-ppob-table">
+                          <div class="portfolio-ppob-table-head">
+                            <strong>Recent Transactions</strong>
+                            <div>
+                              <span>Filter</span>
+                              <span>Export CSV</span>
+                            </div>
+                          </div>
+                          <div class="portfolio-ppob-table-row">
+                            <span>Electricity Postpaid</span>
+                            <span>24 May 2024</span>
+                            <span>#LP-29485721</span>
+                            <span>Rp 12.450.000</span>
+                            <b>Verified</b>
+                          </div>
+                          <div class="portfolio-ppob-table-row">
+                            <span>BPJS Health</span>
+                            <span>23 May 2024</span>
+                            <span>#LP-29485703</span>
+                            <span>Rp 2.860.000</span>
+                            <b class="is-pending">Pending</b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-ppob-slide portfolio-ppob-slide-topup">
+                    <div class="portfolio-ppob-shell">
+                      <aside class="portfolio-ppob-sidebar">
+                        <strong>LuminaPay</strong>
+                        <p>Institutional Utility Portal</p>
+                        <div class="portfolio-ppob-menu">
+                          <span>Dashboard</span>
+                          <span>Electricity</span>
+                          <span class="is-active">Mobile Top-up</span>
+                          <span>BPJS Health</span>
+                          <span>PDAM Water</span>
+                          <span>Transaction History</span>
+                        </div>
+                        <b>+ New Payment</b>
+                        <div class="portfolio-ppob-sidebar-meta">
+                          <span>Security Center</span>
+                          <span>Settings</span>
+                        </div>
+                      </aside>
+                      <div class="portfolio-ppob-main">
+                        <div class="portfolio-ppob-topbar">
+                          <div class="portfolio-ppob-search">Search transactions...</div>
+                          <div class="portfolio-ppob-topbar-meta">
+                            <i></i>
+                            <i></i>
+                            <b>Admin</b>
+                          </div>
+                        </div>
+                        <div class="portfolio-ppob-page-title">Mobile Top-up & Data</div>
+                        <div class="portfolio-ppob-topup-grid">
+                          <div class="portfolio-ppob-topup-main">
+                            <article class="portfolio-ppob-panel">
+                              <strong>1 Recipient Details</strong>
+                              <div class="portfolio-ppob-input-row">
+                                <span>08xx xxxx xxxx</span>
+                                <b>Telkomsel</b>
+                              </div>
+                              <p>Detection automatic based on prefix. Please ensure number is active.</p>
+                            </article>
+                            <article class="portfolio-ppob-panel">
+                              <strong>2 Select Package</strong>
+                              <div class="portfolio-ppob-tabs">
+                                <span class="is-active">Pulsa (Top-up)</span>
+                                <span>Paket Data</span>
+                              </div>
+                              <div class="portfolio-ppob-packages">
+                                <div><span>Voucher</span><strong>50.000</strong><p>Rp 51.200</p></div>
+                                <div><span>Voucher</span><strong>100.000</strong><p>Rp 101.000</p></div>
+                                <div><span>Voucher</span><strong>150.000</strong><p>Rp 151.000</p></div>
+                                <div><span>Voucher</span><strong>200.000</strong><p>Rp 201.000</p></div>
+                                <div><span>Voucher</span><strong>300.000</strong><p>Rp 301.000</p></div>
+                                <div><span>Voucher</span><strong>500.000</strong><p>Rp 501.000</p></div>
+                              </div>
+                              <div class="portfolio-ppob-note">Double Points Weekend • Earn 2x Lumina Points on all top-ups today.</div>
+                            </article>
+                          </div>
+                          <div class="portfolio-ppob-topup-side">
+                            <article class="portfolio-ppob-summary-card">
+                              <span>Payment Summary</span>
+                              <strong>Total Rp 101.000</strong>
+                              <p>Product: Pulsa 100.000</p>
+                              <p>Provider: Telkomsel</p>
+                              <p>Admin Fee: Rp 0</p>
+                              <b>Complete Payment</b>
+                            </article>
+                            <article class="portfolio-ppob-history-mini">
+                              <span>Recent History</span>
+                              <p>0812 3456 7890 • Yesterday • Rp 50.000</p>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-ppob-slide portfolio-ppob-slide-history">
+                    <div class="portfolio-ppob-shell">
+                      <aside class="portfolio-ppob-sidebar">
+                        <strong>LuminaPay</strong>
+                        <p>Institutional Utility Portal</p>
+                        <div class="portfolio-ppob-menu">
+                          <span>Dashboard</span>
+                          <span>Electricity</span>
+                          <span>Mobile Top-up</span>
+                          <span>BPJS Health</span>
+                          <span>PDAM Water</span>
+                          <span class="is-active">Transaction History</span>
+                        </div>
+                        <b>+ New Payment</b>
+                        <div class="portfolio-ppob-sidebar-meta">
+                          <span>Security Center</span>
+                          <span>Settings</span>
+                        </div>
+                      </aside>
+                      <div class="portfolio-ppob-main">
+                        <div class="portfolio-ppob-topbar">
+                          <div class="portfolio-ppob-search">Search reference...</div>
+                          <div class="portfolio-ppob-topbar-meta">
+                            <i></i>
+                            <i></i>
+                            <b>Admin</b>
+                          </div>
+                        </div>
+                        <div class="portfolio-ppob-page-title">Transaction History</div>
+                        <div class="portfolio-ppob-filters">
+                          <span>Date Range</span>
+                          <span>Category</span>
+                          <span>Status</span>
+                          <b>Apply Filters</b>
+                        </div>
+                        <div class="portfolio-ppob-history-table">
+                          <div class="portfolio-ppob-history-head">
+                            <span>Date & Time</span>
+                            <span>Type</span>
+                            <span>Reference No.</span>
+                            <span>Amount</span>
+                            <span>Status</span>
+                          </div>
+                          <div class="portfolio-ppob-history-row">
+                            <span>Oct 24, 2023</span>
+                            <span>Electricity</span>
+                            <span>#LP-9920112</span>
+                            <span>Rp 250.000</span>
+                            <b>Success</b>
+                          </div>
+                          <div class="portfolio-ppob-history-row">
+                            <span>Oct 23, 2023</span>
+                            <span>BPJS Health</span>
+                            <span>#LP-9920110</span>
+                            <span>Rp 150.000</span>
+                            <b class="is-pending">Pending</b>
+                          </div>
+                          <div class="portfolio-ppob-history-row">
+                            <span>Oct 22, 2023</span>
+                            <span>Mobile Top-up</span>
+                            <span>#LP-9920108</span>
+                            <span>Rp 50.000</span>
+                            <b class="is-failed">Failed</b>
+                          </div>
+                          <div class="portfolio-ppob-history-row">
+                            <span>Oct 21, 2023</span>
+                            <span>PDAM Water</span>
+                            <span>#LP-9920105</span>
+                            <span>Rp 105.400</span>
+                            <b>Success</b>
+                          </div>
+                        </div>
+                        <div class="portfolio-ppob-history-cards">
+                          <article>
+                            <strong>Detailed Reporting</strong>
+                            <p>Download institutional history for monthly bookkeeping or compliance needs.</p>
+                          </article>
+                          <article class="is-visual">
+                            <strong>Usage Summary</strong>
+                            <p>Track recurring service spend across electricity, data, and water utilities.</p>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-ppob-slider-dots" aria-hidden="true">
                 <span></span>
                 <span></span>
                 <span></span>

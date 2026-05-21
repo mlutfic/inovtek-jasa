@@ -590,10 +590,11 @@ const portfolioCatalog = {
       theme: "slate",
     },
     {
-      title: "Hiring Space",
-      meta: "Job Portal • HR Panel",
-      layout: "panels",
-      theme: "graphite",
+      title: "Talent Boards",
+      meta: "Lowongan Kerja • Academic, Tech, Creative",
+      layout: "browser",
+      theme: "slate",
+      preview: "jobs-slider",
     },
   ],
   "android-app": [
@@ -1369,6 +1370,159 @@ function createPortfolioVisual(card) {
                 </div>
               </div>
               <div class="portfolio-ppob-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      if (card.preview === "jobs-slider") {
+        return `
+          <div class="${classes} portfolio-preview-jobs-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-jobs-slider-stage" aria-hidden="true">
+                <div class="portfolio-jobs-slider-track">
+                  <section class="portfolio-jobs-slide portfolio-jobs-slide-academic">
+                    <div class="portfolio-jobs-academic-topbar">
+                      <strong>ScholarJobs</strong>
+                      <div class="portfolio-jobs-academic-nav">
+                        <span class="is-active">Find Work</span>
+                        <span>For Employers</span>
+                        <span>Career Advice</span>
+                        <span>Resources</span>
+                      </div>
+                      <div class="portfolio-jobs-academic-actions">
+                        <span>Sign In</span>
+                        <b>Post a Job</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-academic-hero">
+                      <h5>Connecting Intellectual Talent with Global Opportunities</h5>
+                      <p>
+                        ScholarJobs is the premier platform for academic professionals,
+                        researchers, and specialists to find their next career-defining role.
+                      </p>
+                      <div class="portfolio-jobs-academic-search">
+                        <span>Job Title, Skills, or Keyword</span>
+                        <span>Location or Remote</span>
+                        <b>Find Jobs</b>
+                      </div>
+                      <div class="portfolio-jobs-academic-tags">
+                        <em>Popular:</em>
+                        <span>Postdoctoral</span>
+                        <span>Data Science</span>
+                        <span>Professor</span>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-academic-bottom">
+                      <div class="portfolio-jobs-academic-head">
+                        <strong>Featured Job Categories</strong>
+                        <span>View All Categories</span>
+                      </div>
+                      <div class="portfolio-jobs-academic-cards">
+                        <article><b>Finance</b><p>Quantitative analysis, fintech, and policy.</p></article>
+                        <article><b>Healthcare</b><p>Clinical research, public health, and nursing.</p></article>
+                        <article><b>Education</b><p>University faculty, curriculum, and K-12.</p></article>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-jobs-slide portfolio-jobs-slide-terminal">
+                    <div class="portfolio-jobs-terminal-topbar">
+                      <strong>ScholarJobs.</strong>
+                      <div class="portfolio-jobs-terminal-nav">
+                        <span class="is-active">Find Work</span>
+                        <span>For Employers</span>
+                        <span>Career Advice</span>
+                        <span>Resources</span>
+                      </div>
+                      <div class="portfolio-jobs-terminal-actions">
+                        <span>Sign In</span>
+                        <b>Post a Job</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-terminal-main">
+                      <div class="portfolio-jobs-terminal-copy">
+                        <em>System Online: v4.2.0</em>
+                        <h5>Deploy Your Talent to the Elite Stack.</h5>
+                        <div class="portfolio-jobs-terminal-console">
+                          <span>search query.sh -- 88x2</span>
+                          <div class="portfolio-jobs-terminal-screen">
+                            <p>guest@devqueue:~$ search --</p>
+                            <div>
+                              <span>e.g. Rust, K8s, Lead</span>
+                              <span>Remote / New York</span>
+                            </div>
+                            <b>Execute Query</b>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="portfolio-jobs-terminal-metrics">
+                        <article><span>Active Sprints</span><strong>4,821</strong></article>
+                        <article><span>Merged Talents</span><strong>12.4k</strong></article>
+                        <article><span>Latency (avg)</span><strong>14ms</strong></article>
+                        <article><span>Uptime</span><strong>99.9%</strong></article>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-terminal-footer">
+                      <strong>High-Priority Queue</strong>
+                      <span>verified openings from tier-engineering teams</span>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-jobs-slide portfolio-jobs-slide-creative">
+                    <div class="portfolio-jobs-creative-topbar">
+                      <strong>ScholarJobs</strong>
+                      <div class="portfolio-jobs-creative-nav">
+                        <span class="is-active">Find Work</span>
+                        <span>For Employers</span>
+                        <span>Career Advice</span>
+                        <span>Resources</span>
+                      </div>
+                      <div class="portfolio-jobs-creative-actions">
+                        <span>Sign In</span>
+                        <b>Post a Job</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-creative-hero">
+                      <div class="portfolio-jobs-creative-copy">
+                        <em>The Creative Pulse</em>
+                        <h5>Where Creativity Meets Opportunity.</h5>
+                        <p>
+                          TalentPulse connects visionary brands with world-class creators.
+                          Discover your next artistic journey or find the perfect talent.
+                        </p>
+                        <div class="portfolio-jobs-creative-search">
+                          <span>Design, Motion, Copywriting...</span>
+                          <b>Find Talent</b>
+                        </div>
+                        <div class="portfolio-jobs-creative-avatars">
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                          <span>Join 12k+ top creators</span>
+                        </div>
+                      </div>
+                      <div class="portfolio-jobs-creative-visuals">
+                        <article class="is-wave"></article>
+                        <article class="is-tall"></article>
+                        <article class="is-card">
+                          <strong>Brand Design</strong>
+                          <p>Crafting identities that resonate.</p>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="portfolio-jobs-creative-bottom">
+                      <strong>Explore Creative Universes</strong>
+                      <p>The world's most talented creators, organized by the craft they love most.</p>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-jobs-slider-dots" aria-hidden="true">
                 <span></span>
                 <span></span>
                 <span></span>

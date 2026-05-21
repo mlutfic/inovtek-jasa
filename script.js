@@ -515,10 +515,11 @@ const portfolioCatalog = {
       theme: "mint",
     },
     {
-      title: "Course Space",
-      meta: "Online Class • Learning App",
-      layout: "mobile",
+      title: "Learning Spectrum",
+      meta: "E-Learning • Academic, Creative, Pro Tech",
+      layout: "browser",
       theme: "teal",
+      preview: "elearning-slider",
     },
   ],
   sia: [
@@ -854,6 +855,151 @@ function createPortfolioVisual(card) {
         </div>
       `;
     case "browser":
+      if (card.preview === "elearning-slider") {
+        return `
+          <div class="${classes} portfolio-preview-elearning-slider">
+            <div class="portfolio-browser-shell">
+              <div class="portfolio-elearning-slider-stage" aria-hidden="true">
+                <div class="portfolio-elearning-slider-track">
+                  <section class="portfolio-elearning-slide portfolio-elearning-slide-academic">
+                    <div class="portfolio-elearn-academic-topbar">
+                      <strong>Academic Excellence</strong>
+                      <div class="portfolio-elearn-academic-nav">
+                        <span>Faculties</span>
+                        <span>Research</span>
+                        <span>Library</span>
+                      </div>
+                      <div class="portfolio-elearn-academic-actions">
+                        <b>Admissions</b>
+                        <i></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-elearn-academic-hero">
+                      <div class="portfolio-elearn-academic-copy">
+                        <span>Established 1894</span>
+                        <h5>Cultivating Rigorous Minds and Global Leaders</h5>
+                        <p>
+                          Experience the pinnacle of digital education, combining the heritage of
+                          world-class academia with modern technology.
+                        </p>
+                        <div class="portfolio-elearn-academic-buttons">
+                          <b>Explore Programs</b>
+                          <b class="is-secondary">The Faculty</b>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-elearning-slide portfolio-elearning-slide-creative">
+                    <div class="portfolio-elearn-creative-topbar">
+                      <strong>Creative Studio</strong>
+                      <div class="portfolio-elearn-creative-nav">
+                        <span class="is-active">Discover</span>
+                        <span>Live Workshops</span>
+                        <span>Community</span>
+                      </div>
+                      <div class="portfolio-elearn-creative-actions">
+                        <span>Search courses...</span>
+                        <i></i>
+                        <i></i>
+                        <b>Join Studio</b>
+                      </div>
+                    </div>
+                    <div class="portfolio-elearn-creative-grid">
+                      <div class="portfolio-elearn-creative-copy">
+                        <span>Unleash Potential</span>
+                        <h5>
+                          Master your
+                          <em>creative</em>
+                          spark.
+                        </h5>
+                        <p>
+                          Join a vibrant learning marketplace built for the next generation of visual
+                          storytellers and designers.
+                        </p>
+                        <div class="portfolio-elearn-creative-buttons">
+                          <b>Explore Courses</b>
+                          <b class="is-secondary">Teach on Studio</b>
+                        </div>
+                        <div class="portfolio-elearn-creative-rating">4.9/5 from 12k reviews</div>
+                      </div>
+                      <div class="portfolio-elearn-creative-visual">
+                        <div class="portfolio-elearn-creative-splash"></div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="portfolio-elearning-slide portfolio-elearning-slide-pro">
+                    <div class="portfolio-elearn-pro-shell">
+                      <aside class="portfolio-elearn-pro-sidebar">
+                        <strong>Professional Pulse</strong>
+                        <p>Tech learning hub</p>
+                        <div class="portfolio-elearn-pro-nav">
+                          <span class="is-active">Dashboard</span>
+                          <span>My Courses</span>
+                          <span>Certifications</span>
+                          <span>Analytics</span>
+                        </div>
+                        <b>Join Lab</b>
+                      </aside>
+                      <div class="portfolio-elearn-pro-main">
+                        <div class="portfolio-elearn-pro-topbar">
+                          <span>Search tech stacks...</span>
+                          <div class="portfolio-elearn-pro-status">System Online</div>
+                        </div>
+                        <div class="portfolio-elearn-pro-grid">
+                          <article class="portfolio-elearn-pro-hero">
+                            <span>Focus Mode • Mission Critical</span>
+                            <h5>Kubernetes Cluster Architecture</h5>
+                            <p>
+                              Mastering orchestration and high-availability patterns in cloud-native
+                              environments.
+                            </p>
+                            <div class="portfolio-elearn-pro-progress">
+                              <i></i>
+                              <b>Resume Lab</b>
+                            </div>
+                          </article>
+                          <aside class="portfolio-elearn-pro-side">
+                            <article>
+                              <strong>14</strong>
+                              <p>Days consecutive</p>
+                            </article>
+                            <article>
+                              <h6>Certification Alert</h6>
+                              <p>AWS Solution Arch expires in 3 days</p>
+                            </article>
+                          </aside>
+                        </div>
+                        <div class="portfolio-elearn-pro-cards">
+                          <article>
+                            <div></div>
+                            <h6>Penetration Testing v2</h6>
+                          </article>
+                          <article>
+                            <div></div>
+                            <h6>Rust Systems Engineering</h6>
+                          </article>
+                          <article>
+                            <div class="is-map"></div>
+                            <h6>Skill Map</h6>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div class="portfolio-elearning-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
       if (card.preview === "marketplace-slider") {
         return `
           <div class="${classes} portfolio-preview-marketplace-slider">
